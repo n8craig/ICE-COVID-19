@@ -5,22 +5,37 @@ output:
   html_document:
     df_print: paged
 ---
+<<<<<<< HEAD
 Note that the contents of this file were transferred to the R script `COVID_scrape_current_day.R`.
 ```{r Load Libraries}
 # Load Libraries
+=======
+
+```{r}
+>>>>>>> 3a0738967255c8d05c414268658d714122e2c2a1
 library(rvest)
 library(tidyverse)
 ```
 
+<<<<<<< HEAD
 ```{r Get List of URLs}
 # Get List of URLs
+=======
+```{r}
+>>>>>>> 3a0738967255c8d05c414268658d714122e2c2a1
 url <- "https://www.ice.gov/coronavirus"
 page <- read_html(url)
 ```
 
 
+<<<<<<< HEAD
 # COVID-19 Summaries
 ```{r Extract Summary Values from Top Table}
+=======
+
+# COVID-19 Summaries
+```{r}
+>>>>>>> 3a0738967255c8d05c414268658d714122e2c2a1
 # Get the total detained population as a string
 total_detained <-
   html_nodes(page, "table") %>% 
@@ -45,14 +60,22 @@ total_tested <-
   map(.,2) %>% 
   str_c()
   
+<<<<<<< HEAD
 # Add date to summary values
+=======
+
+>>>>>>> 3a0738967255c8d05c414268658d714122e2c2a1
 covid_summary_totals <- 
 tibble(Date = format(Sys.time(), "%m/%d/%Y"),`Total Detained` = total_detained, `Total Tested` = total_tested)
 covid_summary_totals
 
 ```
 
+<<<<<<< HEAD
 ```{r Extract Summary Values from Facility Table}
+=======
+```{r}
+>>>>>>> 3a0738967255c8d05c414268658d714122e2c2a1
 # Get total deaths and Total COVID-19
 tibble_list <- 
 map(url, ~read_html(.x) %>% 
@@ -78,7 +101,11 @@ bind_rows(
 covid_summary_totals2
 ```
 
+<<<<<<< HEAD
 ```{r Bind the Two Summary Tables}
+=======
+```{r}
+>>>>>>> 3a0738967255c8d05c414268658d714122e2c2a1
 # Bind the tables and join them
 covid_summary_totals <- 
 left_join(covid_summary_totals, covid_summary_totals2, by = "Date") %>% 
@@ -87,6 +114,7 @@ left_join(covid_summary_totals, covid_summary_totals2, by = "Date") %>%
 covid_summary_totals
 ```
 
+<<<<<<< HEAD
 ```{r Write Summary Data to File}
 # Write summary values to file
 write_csv(covid_summary_totals,
@@ -99,6 +127,31 @@ write_csv(covid_summary_totals,
 # COVID-19 Facility Numbers
 
 ```{r Extract Facility Table and Filter Unused Data}
+=======
+```{r}
+# write_csv(covid_summary_totals,
+#           "./data/covid_summaries.csv",
+#           append = TRUE,
+#           col_names = FALSE)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# COVID-19 Facility Numbers
+
+```{r}
+>>>>>>> 3a0738967255c8d05c414268658d714122e2c2a1
 # Get the table of cases by facility
 confirmed_cases <- html_nodes(page, "table") %>% 
   html_table() %>% 
@@ -107,7 +160,11 @@ confirmed_cases <- html_nodes(page, "table") %>%
   filter(!grepl("Endeavors", `Confirmed cases currently under isolation or monitoring`)) %>% 
   filter(!grepl("TOTAL", `Custody/AOR/Facility`))
 
+<<<<<<< HEAD
 # Add date to cases by facility
+=======
+
+>>>>>>> 3a0738967255c8d05c414268658d714122e2c2a1
 confirmed_cases <- 
 mutate(confirmed_cases, Date = format(Sys.time(), "%m/%d/%Y"), .before = `Custody/AOR/Facility`)
 confirmed_cases
@@ -115,8 +172,12 @@ confirmed_cases
 
 
 
+<<<<<<< HEAD
 ```{r Write Facility Data to Facility File}
 # Write out data by facility
+=======
+```{r}
+>>>>>>> 3a0738967255c8d05c414268658d714122e2c2a1
 write_csv(confirmed_cases,
           "./data/covid_by_facility.csv",
           append = TRUE,
