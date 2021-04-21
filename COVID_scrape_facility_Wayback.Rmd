@@ -1,0 +1,47 @@
+---
+title: "Wayback Scrape"
+author: "Nathan Craig"
+output:
+  html_document:
+    df_print: paged
+---
+
+```{r}
+library(rvest)
+library(tidyverse)
+```
+
+```{r}
+urls <- 
+read_lines("Wayback_URL_List.txt")
+```
+
+```{r}
+for (val in urls)
+{
+  # Get the date from the URL
+  date <- str_remove_all(val, "https://web.archive.org/web/") 
+  date <- str_remove_all(date, "/https://www.ice.gov/coronavirus") %>% 
+    str_sub(.,start = 1, end = 8)
+
+  # Get the table, fiter unused rows, add date, and write to file
+  read_html(val) %>% 
+    html_nodes(., "table") %>% 
+    html_table() %>% 
+    pluck(2) %>% 
+    filter(!grepl("Field Office", `Confirmed cases currently under isolation or monitoring`)) %>%
+    filter(!grepl("Endeavors", `Confirmed cases currently under isolation or monitoring`)) %>% 
+    filter(!grepl("TOTAL", `Custody/AOR/Facility`)) %>% 
+    mutate(., Date = date, .before = `Custody/AOR/Facility`) %>% 
+    write_csv(.,
+          "./data/covid_by_facility.csv",
+          append = TRUE,
+          col_names = FALSE)
+}
+```
+
+
+
+
+
+
