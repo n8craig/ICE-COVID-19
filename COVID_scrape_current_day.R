@@ -33,6 +33,8 @@ total_tested <-
 # Add date to summary values
 covid_summary_totals <- 
   tibble(Date = format(Sys.time(), "%m/%d/%Y"),`Total Detained` = total_detained, `Total Tested` = total_tested)
+covid_summary_totals$`Total Detained` <- as.numeric(gsub(",", "", covid_summary_totals$`Total Detained`))
+covid_summary_totals$`Total Tested` <- as.numeric(gsub(",", "", covid_summary_totals$`Total Tested`))
 covid_summary_totals
 
 # Get total deaths and Total COVID-19
@@ -57,6 +59,10 @@ covid_summary_totals2 <-
         ~pluck(.x)
     )) %>% 
   mutate(Date = format(Sys.time(), "%m/%d/%Y"), .before = `Total COVID-19 Confirmed in Custody`)
+covid_summary_totals2$`Total COVID-19 Confirmed in Custody` <- as.numeric(gsub(",", "", covid_summary_totals2$`Total COVID-19 Confirmed in Custody`))
+covid_summary_totals2$`Total Deaths` <- as.numeric(gsub(",", "", covid_summary_totals2$`Total Deaths`))
+covid_summary_totals2$`Total Cumulative COVID-19` <- as.numeric(gsub(",", "", covid_summary_totals2$`Total Cumulative COVID-19`))
+
 covid_summary_totals2
 
 # Bind the tables and join them

@@ -1,0 +1,130 @@
+---
+title: "ICE COVID-19 Plots"
+author: "Nathan Craig"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    css:
+    - !expr system.file("rmarkdown/templates/html_vignette/resources/vignette.css",
+                         package = "rmarkdown")
+    toc: yes
+    number_sections: true
+    keep_md: yes
+---
+
+# Introduction
+
+This document provides plots of data reported on the Immigration and Customs Enforcement [Guidance on COVID-19](https://www.ice.gov/coronavirus) website. On Friday March 13, 2020 ICE suspended family and social visitation. On March 27, 2020 ICE [established](https://web.archive.org/web/20200327175825/https://www.ice.gov/coronavirus) the Guidance on COVID-19 web page and indicated the site would be updated frequently. Shortly afterwards I began logging the data on a daily basis, occasionally relying on the Internet Archive's Wayback Machine's [regular scrapes](https://web.archive.org/web/20200401000000*/https://www.ice.gov/coronavirus) of the page to pick up days that I missed.
+
+```{r Load Libraries}
+# Load Libraries
+library(readr)
+library(summarytools)
+st_options(plain.ascii = FALSE,
+           footnote = NA,
+           subtitle.emphasis = FALSE,
+           round.digits = 2)
+library(tidyverse)
+library(lubridate)
+library(ggplot2)
+library(ggstatsplot)
+library(knitr)
+options(digits=3)
+opts_chunk$set(results = 'asis',
+               comment = NA,
+               prompt = FALSE,
+               cache = FALSE)
+# Turn off scientific notation
+options(digits=5, scipen=15)
+
+```
+
+```{r Load Dataset}
+# Load Dataset
+df_summary <- read_csv("data/covid_summaries.csv", 
+    col_types = cols(Date = col_date(format = "%m/%d/%Y"), 
+        `Total Deaths` = col_double(), `Total COVID-19 Confirmed in Custody` = col_double()))
+View(df_summary)
+```
+
+```{r ICE Detention Population}
+
+# ICE Detention Population Over Time
+ggplot(df_summary, aes(x=Date, y=`Total Detained`))+
+  geom_line()+
+  geom_point()+
+  geom_smooth()+
+  labs(
+    title = "ICE Detention Population Over Time",
+    subtitle = "Smoothed trend line added",
+    caption = "Data source: https://www.ice.gov/coronavirus"
+  )
+
+```
+
+```{r Total Confirmed COVID-19}
+# Total Confirmed COVID-19 Over Time
+ggplot(df_summary, aes(x=Date, y=`Total COVID-19 Confirmed in Custody`))+
+  geom_line()+
+  geom_smooth()+
+   labs(
+    title = "Total Number of Confirmed COVID-19 Cases in ICE Detention Over Time",
+    subtitle = "Smoothed trend line added",
+    caption = "Data source: https://www.ice.gov/coronavirus"
+  )
+
+```
+
+```{r Ratio Confirmed by Total Detained}
+# Ratio Confirmed by Total Detained
+df_summary %>% 
+  mutate(`Confirmed Detained Ratio` = `Total COVID-19 Confirmed in Custody`/`Total Detained`) %>%
+  ggplot(aes(x=Date, y=`Confirmed Detained Ratio`))+
+
+  geom_line()+
+  geom_smooth()+
+   labs(
+    title = "Ratio of Confirmed COVID-19 Cases in ICE Detention by \nTotal ICE Detention Population Over Time",
+    subtitle = "Smoothed trend line added",
+    caption = "Data source: https://www.ice.gov/coronavirus"
+  )
+
+```
+
+```{r Cumulative COVID-19}
+# Cumulative COVID-19
+ggplot(df_summary, aes(x=Date, y=`Total Cumulative COVID-19`))+
+  geom_line()+
+  geom_smooth()+
+   labs(
+    title = "Cumulative COVID-19 Cases in ICE Detention Over Time",
+    subtitle = "Smoothed trend line added",
+    caption = "Data source: https://www.ice.gov/coronavirus"
+  )
+
+```
+
+```{r Total COVID-19 Tests}
+# Total COVID-19 Tests
+ggplot(df_summary, aes(x=Date, y=`Total Tested`))+
+  geom_line()+
+  geom_smooth()+
+   labs(
+    title = "Total Number of COVID-19 Tests in ICE Detention Population Over Time",
+    subtitle = "Smoothed trend line added",
+    caption = "Data source: https://www.ice.gov/coronavirus"
+  )
+
+```
+
+```{r Total Deaths in ICE Custody}
+# Total Deaths in ICE Custody
+ggplot(df_summary, aes(x=Date, y=`Total Deaths`))+
+  geom_line()+
+  geom_smooth()+
+   labs(
+    title = "Total Number of Deaths in ICE Detention Over Time",
+    subtitle = "Smoothed trend line added",
+    caption = "Data source: https://www.ice.gov/coronavirus"
+  )
+```
