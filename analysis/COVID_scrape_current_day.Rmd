@@ -55,7 +55,10 @@ total_tested <-
 # Add date to summary values
 covid_summary_totals <- 
 tibble(Date = format(Sys.time(), "%m/%d/%Y"),`Total Detained` = total_detained, `Total Tested` = total_tested)
+covid_summary_totals$`Total Detained` <- as.numeric(gsub(",", "", covid_summary_totals$`Total Detained`))
+covid_summary_totals$`Total Tested` <- as.numeric(gsub(",", "", covid_summary_totals$`Total Tested`))
 covid_summary_totals
+
 
 ```
 
@@ -83,8 +86,12 @@ bind_rows(
     ~pluck(.x)
     )) %>% 
   mutate(Date = format(Sys.time(), "%m/%d/%Y"), .before = `Total COVID-19 Confirmed in Custody`)
+covid_summary_totals2$`Total COVID-19 Confirmed in Custody` <- as.numeric(gsub(",", "", covid_summary_totals2$`Total COVID-19 Confirmed in Custody`))
+covid_summary_totals2$`Total Deaths` <- as.numeric(gsub(",", "", covid_summary_totals2$`Total Deaths`))
+covid_summary_totals2$`Total Cumulative COVID-19` <- as.numeric(gsub(",", "", covid_summary_totals2$`Total Cumulative COVID-19`))
 covid_summary_totals2
 ```
+
 
 
 ```{r Bind the Two Summary Tables}
@@ -100,7 +107,7 @@ covid_summary_totals
 ```{r Write Summary Data to File}
 # Write summary values to file
 write_csv(covid_summary_totals,
-          "./data/covid_summaries.csv",
+          "./../data/covid_summaries.csv",
           append = TRUE,
           col_names = FALSE)
 ```
@@ -129,7 +136,7 @@ confirmed_cases
 ```{r Write Facility Data to Facility File}
 # Write out data by facility
 write_csv(confirmed_cases,
-          "./data/covid_by_facility.csv",
+          "./../data/covid_by_facility.csv",
           append = TRUE,
           col_names = FALSE)
 ```

@@ -1,0 +1,130 @@
+
+R version 4.0.5 (2021-03-31) -- "Shake and Throw"
+Copyright (C) 2021 The R Foundation for Statistical Computing
+Platform: x86_64-w64-mingw32/x64 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+[Previously saved workspace restored]
+
+> # Loading libraries [install the libraries before if not already installed]
+> library(knitr)
+> library(rmarkdown)
+> 
+> # Knits rmd file (.Rmd is saved in the working directory)
+> knit("C:\\Users\\nmc\\Nextcloud\\AVID_Restricted\\ICE_data\\ICE-COVID-19\\COVID_Summary_Plots.Rmd")
+
+
+processing file: C:\Users\nmc\Nextcloud\AVID_Restricted\ICE_data\ICE-COVID-19\COVID_Summary_Plots.Rmd
+  |                                                                              |                                                                      |   0%  |                                                                              |....                                                                  |   6%
+   inline R code fragments
+
+  |                                                                              |.........                                                             |  12%
+label: Load Libraries
+  |                                                                              |.............                                                         |  19%
+  ordinary text without R code
+
+  |                                                                              |..................                                                    |  25%
+label: Load Dataset
+  |                                                                              |......................                                                |  31%
+  ordinary text without R code
+
+  |                                                                              |..........................                                            |  38%
+label: ICE Detention Population
+  |                                                                              |...............................                                       |  44%
+  ordinary text without R code
+
+  |                                                                              |...................................                                   |  50%
+label: Total Confirmed COVID-19
+  |                                                                              |.......................................                               |  56%
+  ordinary text without R code
+
+  |                                                                              |............................................                          |  62%
+label: Ratio Confirmed by Total Detained
+  |                                                                              |................................................                      |  69%
+  ordinary text without R code
+
+  |                                                                              |....................................................                  |  75%
+label: Cumulative COVID-19
+  |                                                                              |.........................................................             |  81%
+  ordinary text without R code
+
+  |                                                                              |.............................................................         |  88%
+label: Total COVID-19 Tests
+  |                                                                              |..................................................................    |  94%
+  ordinary text without R code
+
+  |                                                                              |......................................................................| 100%
+label: Total Deaths in ICE Custody
+
+output file: COVID_Summary_Plots.md
+
+[1] "COVID_Summary_Plots.md"
+> 
+> # Creates the html output
+> render("C:\\Users\\nmc\\Nextcloud\\AVID_Restricted\\ICE_data\\ICE-COVID-19\\COVID_Summary_Plots.Rmd")
+
+
+processing file: COVID_Summary_Plots.Rmd
+  |                                                                              |                                                                      |   0%  |                                                                              |....                                                                  |   6%
+   inline R code fragments
+
+  |                                                                              |.........                                                             |  12%
+label: Load Libraries
+  |                                                                              |.............                                                         |  19%
+  ordinary text without R code
+
+  |                                                                              |..................                                                    |  25%
+label: Load Dataset
+  |                                                                              |......................                                                |  31%
+  ordinary text without R code
+
+  |                                                                              |..........................                                            |  38%
+label: ICE Detention Population
+  |                                                                              |...............................                                       |  44%
+  ordinary text without R code
+
+  |                                                                              |...................................                                   |  50%
+label: Total Confirmed COVID-19
+  |                                                                              |.......................................                               |  56%
+  ordinary text without R code
+
+  |                                                                              |............................................                          |  62%
+label: Ratio Confirmed by Total Detained
+  |                                                                              |................................................                      |  69%
+  ordinary text without R code
+
+  |                                                                              |....................................................                  |  75%
+label: Cumulative COVID-19
+  |                                                                              |.........................................................             |  81%
+  ordinary text without R code
+
+  |                                                                              |.............................................................         |  88%
+label: Total COVID-19 Tests
+  |                                                                              |..................................................................    |  94%
+  ordinary text without R code
+
+  |                                                                              |......................................................................| 100%
+label: Total Deaths in ICE Custody
+
+output file: COVID_Summary_Plots.knit.md
+
+"C:/PROGRA~1/Pandoc/pandoc" +RTS -K512m -RTS COVID_Summary_Plots.utf8.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash --output COVID_Summary_Plots.html --lua-filter "C:\Users\nmc\Documents\R\win-library\4.0\rmarkdown\rmarkdown\lua\pagebreak.lua" --lua-filter "C:\Users\nmc\Documents\R\win-library\4.0\rmarkdown\rmarkdown\lua\latex-div.lua" --self-contained --variable bs3=TRUE --standalone --section-divs --table-of-contents --toc-depth 3 --template "C:\Users\nmc\Documents\R\win-library\4.0\rmarkdown\rmd\h\default.html" --no-highlight --variable highlightjs=1 --number-sections --css "C:/Users/nmc/Documents/R/win-library/4.0/rmarkdown/rmarkdown/templates/html_vignette/resources/vignette.css" --variable theme=bootstrap --include-in-header "C:\Users\nmc\AppData\Local\Temp\Rtmp4M2PCG\rmarkdown-str8efc19b772d9.html" --mathjax --variable "mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" 
+
+Output created: COVID_Summary_Plots.html
+> 
+> proc.time()
+   user  system elapsed 
+   6.76    1.46    8.85 

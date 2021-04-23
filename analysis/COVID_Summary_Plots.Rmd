@@ -16,6 +16,20 @@ output:
 
 This document provides plots of data reported on the Immigration and Customs Enforcement [Guidance on COVID-19](https://www.ice.gov/coronavirus) website. On Friday March 13, 2020 ICE suspended family and social visitation. On March 27, 2020 ICE [established](https://web.archive.org/web/20200327175825/https://www.ice.gov/coronavirus) the Guidance on COVID-19 web page and indicated the site would be updated frequently. Shortly afterwards I began logging the data on a daily basis, occasionally relying on the Internet Archive's Wayback Machine's [regular scrapes](https://web.archive.org/web/20200401000000*/https://www.ice.gov/coronavirus) of the page to pick up days that I missed.
 
+This is new text with super important insights. Here is is the command that I'm currently using:
+
+```
+R.exe location = "C:\Program Files\R\R-4.0.5\bin\R.exe"
+.R file location = "C:\Users\nmc\Nextcloud\AVID_Restricted\ICE_data\ICE-COVID-19\analysis\run_report.R"
+file saving location = "C:\Users\nmc\Nextcloud\AVID_Restricted\ICE_data\ICE-COVID-19\analysis\test.Rout"
+
+# The actual command.
+"C:\Program Files\R\R-4.0.5\bin\R.exe" CMD BATCH "C:\Users\nmc\Nextcloud\AVID_Restricted\ICE_data\ICE-COVID-19\analysis\run_report.R" "C:\Users\nmc\Nextcloud\AVID_Restricted\ICE_data\ICE-COVID-19\analysis\test.Rout"
+```
+A very helpful link [RPubs - Automate Your Repetitive Reports!](https://rpubs.com/arafath/automateR). Still need to automate uploading the file to Rpubs, not sure how to do that but the report is created fresh each day.
+
+
+
 ```{r Load Libraries}
 # Load Libraries
 library(readr)
@@ -41,7 +55,7 @@ options(digits=5, scipen=15)
 
 ```{r Load Dataset}
 # Load Dataset
-df_summary <- read_csv("data/covid_summaries.csv", 
+df_summary <- read_csv("./../data/covid_summaries.csv", 
     col_types = cols(Date = col_date(format = "%m/%d/%Y"), 
         `Total Deaths` = col_double(), `Total COVID-19 Confirmed in Custody` = col_double()))
 View(df_summary)

@@ -1,7 +1,7 @@
 ---
 title: "ICE COVID-19 EDA"
 author: "Nathan Craig"
-date: "2021-04-23"
+date: "`r Sys.Date()`"
 output:
   html_document:
     css:
@@ -27,78 +27,18 @@ In April of 2020, Advocate Visitors with Immigrants in Detention (AVID) *in the 
 
 On Friday March 13, 2020 ICE suspended family and social visitation. On March 27, 2020 ICE established the Guidance on COVID-19 web page and indicated the site would be updated frequently. Shortly afterwards I began logging the data on a daily basis, occasionally relying on the Internet Archive's Wayback Machine's regular scrapes of the page to pick up days that I missed.
 
-
-```r
+```{r Load Libraries}
 # Load Libraries
 library(readr)
 library(summarytools)
-```
-
-```
-## Registered S3 method overwritten by 'pryr':
-##   method      from
-##   print.bytes Rcpp
-```
-
-```r
 st_options(plain.ascii = FALSE,
            footnote = NA,
            subtitle.emphasis = FALSE,
            round.digits = 2)
 library(tidyverse)
-```
-
-```
-## -- Attaching packages --------------------------------------- tidyverse 1.3.0 --
-```
-
-```
-## v ggplot2 3.3.3     v dplyr   1.0.5
-## v tibble  3.1.0     v stringr 1.4.0
-## v tidyr   1.1.3     v forcats 0.5.1
-## v purrr   0.3.4
-```
-
-```
-## -- Conflicts ------------------------------------------ tidyverse_conflicts() --
-## x dplyr::filter() masks stats::filter()
-## x dplyr::lag()    masks stats::lag()
-## x tibble::view()  masks summarytools::view()
-```
-
-```r
 library(lubridate)
-```
-
-```
-## 
-## Attaching package: 'lubridate'
-```
-
-```
-## The following objects are masked from 'package:base':
-## 
-##     date, intersect, setdiff, union
-```
-
-```r
 library(ggplot2)
 library(ggstatsplot)
-```
-
-```
-## Registered S3 method overwritten by 'parameters':
-##   method     from      
-##   ci.blavaan bayestestR
-```
-
-```
-## In case you would like cite this package, cite it as:
-##      Patil, I. (2018). ggstatsplot: "ggplot2" Based Plots with Statistical Details. CRAN.
-##      Retrieved from https://cran.r-project.org/web/packages/ggstatsplot/index.html
-```
-
-```r
 library(knitr)
 options(digits=3)
 opts_chunk$set(results = 'asis',
@@ -107,18 +47,18 @@ opts_chunk$set(results = 'asis',
                cache = FALSE)
 # Turn off scientific notation
 options(digits=5, scipen=15)
+
 ```
 
-
-```r
+```{r Load Dataset}
 # Load Dataset
 df_summary <- read_csv("./data/covid_summaries.csv", 
     col_types = cols(Date = col_date(format = "%m/%d/%Y"), 
         `Total Deaths` = col_double(), `Total COVID-19 Confirmed in Custody` = col_double()))
 ```
 
+```{r ICE Detention Population}
 
-```r
 # ICE Detention Population Over Time
 ggplot(df_summary, aes(x=Date, y=`Total Detained`))+
   geom_line()+
@@ -129,28 +69,10 @@ ggplot(df_summary, aes(x=Date, y=`Total Detained`))+
     subtitle = "Smoothed trend line added",
     caption = "Data source: https://www.ice.gov/coronavirus"
   )
-```
 
 ```
-`geom_smooth()` using method = 'loess' and formula 'y ~ x'
-```
 
-```
-Warning: Removed 27 rows containing non-finite values (stat_smooth).
-```
-
-```
-Warning: Removed 27 row(s) containing missing values (geom_path).
-```
-
-```
-Warning: Removed 27 rows containing missing values (geom_point).
-```
-
-![](README_files/figure-html/ICE Detention Population-1.png)<!-- -->
-
-
-```r
+```{r Total Confirmed COVID-19}
 # Total Confirmed COVID-19 Over Time
 ggplot(df_summary, aes(x=Date, y=`Total COVID-19 Confirmed in Custody`))+
   geom_line()+
@@ -160,24 +82,10 @@ ggplot(df_summary, aes(x=Date, y=`Total COVID-19 Confirmed in Custody`))+
     subtitle = "Smoothed trend line added",
     caption = "Data source: https://www.ice.gov/coronavirus"
   )
-```
 
 ```
-`geom_smooth()` using method = 'loess' and formula 'y ~ x'
-```
 
-```
-Warning: Removed 63 rows containing non-finite values (stat_smooth).
-```
-
-```
-Warning: Removed 63 row(s) containing missing values (geom_path).
-```
-
-![](README_files/figure-html/Total Confirmed COVID-19-1.png)<!-- -->
-
-
-```r
+```{r Ratio Confirmed by Total Detained}
 # Ratio Confirmed by Total Detained
 df_summary %>% 
   mutate(`Confirmed Detained Ratio` = `Total COVID-19 Confirmed in Custody`/`Total Detained`) %>%
@@ -190,24 +98,10 @@ df_summary %>%
     subtitle = "Smoothed trend line added",
     caption = "Data source: https://www.ice.gov/coronavirus"
   )
-```
 
 ```
-`geom_smooth()` using method = 'loess' and formula 'y ~ x'
-```
 
-```
-Warning: Removed 63 rows containing non-finite values (stat_smooth).
-```
-
-```
-Warning: Removed 63 row(s) containing missing values (geom_path).
-```
-
-![](README_files/figure-html/Ratio Confirmed by Total Detained-1.png)<!-- -->
-
-
-```r
+```{r Cumulative COVID-19}
 # Cumulative COVID-19
 ggplot(df_summary, aes(x=Date, y=`Total Cumulative COVID-19`))+
   geom_line()+
@@ -217,16 +111,10 @@ ggplot(df_summary, aes(x=Date, y=`Total Cumulative COVID-19`))+
     subtitle = "Smoothed trend line added",
     caption = "Data source: https://www.ice.gov/coronavirus"
   )
-```
 
 ```
-`geom_smooth()` using method = 'loess' and formula 'y ~ x'
-```
 
-![](README_files/figure-html/Cumulative COVID-19-1.png)<!-- -->
-
-
-```r
+```{r Total COVID-19 Tests}
 # Total COVID-19 Tests
 ggplot(df_summary, aes(x=Date, y=`Total Tested`))+
   geom_line()+
@@ -236,24 +124,10 @@ ggplot(df_summary, aes(x=Date, y=`Total Tested`))+
     subtitle = "Smoothed trend line added",
     caption = "Data source: https://www.ice.gov/coronavirus"
   )
-```
 
 ```
-`geom_smooth()` using method = 'loess' and formula 'y ~ x'
-```
 
-```
-Warning: Removed 31 rows containing non-finite values (stat_smooth).
-```
-
-```
-Warning: Removed 31 row(s) containing missing values (geom_path).
-```
-
-![](README_files/figure-html/Total COVID-19 Tests-1.png)<!-- -->
-
-
-```r
+```{r Total Deaths in ICE Custody}
 # Total Deaths in ICE Custody
 ggplot(df_summary, aes(x=Date, y=`Total Deaths`))+
   geom_line()+
@@ -264,19 +138,5 @@ ggplot(df_summary, aes(x=Date, y=`Total Deaths`))+
     caption = "Data source: https://www.ice.gov/coronavirus"
   )
 ```
-
-```
-`geom_smooth()` using method = 'loess' and formula 'y ~ x'
-```
-
-```
-Warning: Removed 63 rows containing non-finite values (stat_smooth).
-```
-
-```
-Warning: Removed 63 row(s) containing missing values (geom_path).
-```
-
-![](README_files/figure-html/Total Deaths in ICE Custody-1.png)<!-- -->
 
 # References
