@@ -9,7 +9,9 @@ output:
                          package = "rmarkdown")
     toc: yes
     number_sections: true
-    keep_md: yes
+  github_document:
+   toc: yes
+   number_sections: true
 bibliography: references.bib
 ---
 

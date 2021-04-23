@@ -302,3 +302,39 @@ x dplyr::lag()            masks stats::lag()
  9 04/22~ Worcester County~ 0                  0                1               
 10 04/22~ Bristol County D~ 0                  0                9               
 # ... with 117 more rows
+-- Attaching packages --------------------------------------- tidyverse 1.3.0 --
+v ggplot2 3.3.3     v purrr   0.3.4
+v tibble  3.1.0     v dplyr   1.0.5
+v tidyr   1.1.3     v stringr 1.4.0
+v readr   1.4.0     v forcats 0.5.1
+-- Conflicts ------------------------------------------ tidyverse_conflicts() --
+x dplyr::filter()         masks stats::filter()
+x readr::guess_encoding() masks rvest::guess_encoding()
+x dplyr::lag()            masks stats::lag()
+# A tibble: 1 x 3
+  Date       `Total Detained` `Total Tested`
+  <chr>                 <dbl>          <dbl>
+1 04/23/2021            15054         138334
+# A tibble: 1 x 4
+  Date      `Total COVID-19 Confirmed in~ `Total Deaths` `Total Cumulative COVI~
+  <chr>                             <dbl>          <dbl>                   <dbl>
+1 04/23/20~                          1028              9                   12269
+# A tibble: 1 x 6
+  Date     `Total Detained` `Total Cumulative COV~ `Total Tested` `Total Deaths`
+  <chr>               <dbl>                  <dbl>          <dbl>          <dbl>
+1 04/23/2~            15054                  12269         138334              9
+# ... with 1 more variable: Total COVID-19 Confirmed in Custody <dbl>
+# A tibble: 129 x 5
+   Date   `Custody/AOR/Fac~ `Confirmed cases ~ `Detainee death~ `Total confirme~
+   <chr>  <chr>             <chr>              <chr>            <chr>           
+ 1 04/23~ Charleston Count~ 0                  0                2               
+ 2 04/23~ Columbia Regiona~ 0                  0                1               
+ 3 04/23~ Folkston ICE Pro~ 0                  0                104             
+ 4 04/23~ Irwin County Det~ 0                  0                71              
+ 5 04/23~ Robert A. Deyton~ 0                  0                6               
+ 6 04/23~ Sheriff Al Canno~ 0                  0                1               
+ 7 04/23~ Stewart Detentio~ 2                  4                495             
+ 8 04/23~ Howard County De~ 0                  0                2               
+ 9 04/23~ Worcester County~ 0                  0                1               
+10 04/23~ Bristol County D~ 0                  0                9               
+# ... with 119 more rows
