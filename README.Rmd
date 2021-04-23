@@ -3,15 +3,15 @@ title: "ICE COVID-19 EDA"
 author: "Nathan Craig"
 date: "`r Sys.Date()`"
 output:
+  github_document:
+   toc: yes
+   number_sections: true
   html_document:
     css:
     - !expr system.file("rmarkdown/templates/html_vignette/resources/vignette.css",
                          package = "rmarkdown")
     toc: yes
     number_sections: true
-  github_document:
-   toc: yes
-   number_sections: true
 bibliography: references.bib
 ---
 
