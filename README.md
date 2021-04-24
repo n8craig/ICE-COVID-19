@@ -79,6 +79,7 @@ produced by AVID, at that point data were being manually copied and
 pasted while the graph was constructed in Excel.
 
 [![](images/2021-04-23%2019_00_22-AVID_Letter_NM_El_Paso_5-26-2020_Redacted.pdf%20%E2%80%94%20Mozilla%20Firefox.jpg)](https://avid.chihuahuan.org/2020/05/28/continued-negligence-by-ice-and-private-contractors-requires-the-immediate-release-of-those-held-in-ice-detention-in-nm-and-el-paso-tx/)
+
 On June 17, 2020 AVID [sent a
 letter](https://i2.wp.com/avid.chihuahuan.org/wp-content/uploads/sites/4/2020/06/ICE-COVID-19-Cases-OCPC-6-15-2020.png?resize=1024%2C710&ssl=1)
 to Governor Lujan Grisham calling for her to prevent ICE from
