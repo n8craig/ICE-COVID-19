@@ -1,5 +1,5 @@
 # Note that file paths may require double //
 library(taskscheduleR)
-job_path <- file.path(getwd(),"COVID_scrape_current_day.R")
-taskscheduler_create(taskname = "R_COVID_19_ICE_Scrape", rscript = job_path, 
-                     schedule = "MINUTE", starttime = "12:55", startdate = format(Sys.Date(), "%m/%d/%Y"))
+job_path <- file.path(getwd(),"analysis/COVID_scrape_current_day.R")
+taskscheduler_create(taskname = "000stupid", rscript = job_path, 
+                     schedule = "MINUTE", starttime = "10:00", startdate = format(Sys.Date(), "%m/%d/%Y"))

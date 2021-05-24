@@ -1220,3 +1220,6 @@ Execution halted
 Error: package or namespace load failed for 'tidyverse' in loadNamespace(j <- i[[1L]], c(lib.loc, .libPaths()), versionCheck = vI[[j]]):
  namespace 'vctrs' 0.3.6 is already loaded, but >= 0.3.8 is required
 Execution halted
+Error: package or namespace load failed for 'tidyverse' in loadNamespace(j <- i[[1L]], c(lib.loc, .libPaths()), versionCheck = vI[[j]]):
+ namespace 'vctrs' 0.3.6 is already loaded, but >= 0.3.8 is required
+Execution halted
