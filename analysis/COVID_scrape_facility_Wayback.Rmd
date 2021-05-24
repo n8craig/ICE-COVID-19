@@ -12,9 +12,10 @@ library(tidyverse)
 ```
 
 ```{r}
-urls <- 
-read_lines("Wayback_URL_List.txt")
+urls <- read_lines("Wayback_URL_List.txt")
 ```
+
+
 
 ```{r}
 for (val in urls)
@@ -24,7 +25,7 @@ for (val in urls)
   date <- str_remove_all(date, "/https://www.ice.gov/coronavirus") %>% 
     str_sub(.,start = 1, end = 8)
 
-  # Get the table, fiter unused rows, add date, and write to file
+  # Get the table, filter unused rows, add date, and write to file
   read_html(val) %>% 
     html_nodes(., "table") %>% 
     html_table() %>% 
@@ -34,14 +35,36 @@ for (val in urls)
     filter(!grepl("TOTAL", `Custody/AOR/Facility`)) %>% 
     mutate(., Date = date, .before = `Custody/AOR/Facility`) %>% 
     write_csv(.,
-          "./../data/covid_by_facility.csv",
+          "./../data/covid_by_facility_tmp.csv",
           append = TRUE,
           col_names = FALSE)
 }
 ```
 
+# Working out some new things for records that are between 2020-11-22 and 2021-01-12
+```{r}
+url <- "https://web.archive.org/web/20210112011244/https://www.ice.gov/coronavirus"
+```
 
 
+```{r}
+  # Get the date from the URL
+  date <- str_remove_all(url, "https://web.archive.org/web/") 
+  date <- str_remove_all(date, "/https://www.ice.gov/coronavirus") %>% 
+    str_sub(.,start = 1, end = 8)
 
+  # Get the table, filter unused rows, add date, and write to file
+  read_html(url) %>% 
+    html_nodes(., "table") %>% 
+    html_table() %>%
+    pluck(2) %>%  
+    filter(!grepl("Field Office", `Custody/AOR/Facility`)) %>% 
+    filter(!grepl("TOTAL", `Custody/AOR/Facility`)) %>% 
+    mutate(., Date = date, .before = `Custody/AOR/Facility`) %>% 
+    write_csv(.,
+          "./../data/covid_by_facility_tmp.csv",
+          append = TRUE,
+          col_names = FALSE)
+```
 
 

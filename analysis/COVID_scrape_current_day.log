@@ -338,3 +338,885 @@ x dplyr::lag()            masks stats::lag()
  9 04/23~ Worcester County~ 0                  0                1               
 10 04/23~ Bristol County D~ 0                  0                9               
 # ... with 119 more rows
+-- Attaching packages --------------------------------------- tidyverse 1.3.0 --
+v ggplot2 3.3.3     v purrr   0.3.4
+v tibble  3.1.0     v dplyr   1.0.5
+v tidyr   1.1.3     v stringr 1.4.0
+v readr   1.4.0     v forcats 0.5.1
+-- Conflicts ------------------------------------------ tidyverse_conflicts() --
+x dplyr::filter()         masks stats::filter()
+x readr::guess_encoding() masks rvest::guess_encoding()
+x dplyr::lag()            masks stats::lag()
+# A tibble: 1 x 3
+  Date       `Total Detained` `Total Tested`
+  <chr>                 <dbl>          <dbl>
+1 04/24/2021            15054         138334
+# A tibble: 1 x 4
+  Date      `Total COVID-19 Confirmed in~ `Total Deaths` `Total Cumulative COVI~
+  <chr>                             <dbl>          <dbl>                   <dbl>
+1 04/24/20~                          1028              9                   12269
+# A tibble: 1 x 6
+  Date     `Total Detained` `Total Cumulative COV~ `Total Tested` `Total Deaths`
+  <chr>               <dbl>                  <dbl>          <dbl>          <dbl>
+1 04/24/2~            15054                  12269         138334              9
+# ... with 1 more variable: Total COVID-19 Confirmed in Custody <dbl>
+# A tibble: 129 x 5
+   Date   `Custody/AOR/Fac~ `Confirmed cases ~ `Detainee death~ `Total confirme~
+   <chr>  <chr>             <chr>              <chr>            <chr>           
+ 1 04/24~ Charleston Count~ 0                  0                2               
+ 2 04/24~ Columbia Regiona~ 0                  0                1               
+ 3 04/24~ Folkston ICE Pro~ 0                  0                104             
+ 4 04/24~ Irwin County Det~ 0                  0                71              
+ 5 04/24~ Robert A. Deyton~ 0                  0                6               
+ 6 04/24~ Sheriff Al Canno~ 0                  0                1               
+ 7 04/24~ Stewart Detentio~ 2                  4                495             
+ 8 04/24~ Howard County De~ 0                  0                2               
+ 9 04/24~ Worcester County~ 0                  0                1               
+10 04/24~ Bristol County D~ 0                  0                9               
+# ... with 119 more rows
+-- Attaching packages --------------------------------------- tidyverse 1.3.0 --
+v ggplot2 3.3.3     v purrr   0.3.4
+v tibble  3.1.0     v dplyr   1.0.5
+v tidyr   1.1.3     v stringr 1.4.0
+v readr   1.4.0     v forcats 0.5.1
+-- Conflicts ------------------------------------------ tidyverse_conflicts() --
+x dplyr::filter()         masks stats::filter()
+x readr::guess_encoding() masks rvest::guess_encoding()
+x dplyr::lag()            masks stats::lag()
+# A tibble: 1 x 3
+  Date       `Total Detained` `Total Tested`
+  <chr>                 <dbl>          <dbl>
+1 04/25/2021            15054         138334
+# A tibble: 1 x 4
+  Date      `Total COVID-19 Confirmed in~ `Total Deaths` `Total Cumulative COVI~
+  <chr>                             <dbl>          <dbl>                   <dbl>
+1 04/25/20~                          1028              9                   12269
+# A tibble: 1 x 6
+  Date     `Total Detained` `Total Cumulative COV~ `Total Tested` `Total Deaths`
+  <chr>               <dbl>                  <dbl>          <dbl>          <dbl>
+1 04/25/2~            15054                  12269         138334              9
+# ... with 1 more variable: Total COVID-19 Confirmed in Custody <dbl>
+# A tibble: 129 x 5
+   Date   `Custody/AOR/Fac~ `Confirmed cases ~ `Detainee death~ `Total confirme~
+   <chr>  <chr>             <chr>              <chr>            <chr>           
+ 1 04/25~ Charleston Count~ 0                  0                2               
+ 2 04/25~ Columbia Regiona~ 0                  0                1               
+ 3 04/25~ Folkston ICE Pro~ 0                  0                104             
+ 4 04/25~ Irwin County Det~ 0                  0                71              
+ 5 04/25~ Robert A. Deyton~ 0                  0                6               
+ 6 04/25~ Sheriff Al Canno~ 0                  0                1               
+ 7 04/25~ Stewart Detentio~ 2                  4                495             
+ 8 04/25~ Howard County De~ 0                  0                2               
+ 9 04/25~ Worcester County~ 0                  0                1               
+10 04/25~ Bristol County D~ 0                  0                9               
+# ... with 119 more rows
+-- Attaching packages --------------------------------------- tidyverse 1.3.0 --
+v ggplot2 3.3.3     v purrr   0.3.4
+v tibble  3.1.0     v dplyr   1.0.5
+v tidyr   1.1.3     v stringr 1.4.0
+v readr   1.4.0     v forcats 0.5.1
+-- Conflicts ------------------------------------------ tidyverse_conflicts() --
+x dplyr::filter()         masks stats::filter()
+x readr::guess_encoding() masks rvest::guess_encoding()
+x dplyr::lag()            masks stats::lag()
+# A tibble: 1 x 3
+  Date       `Total Detained` `Total Tested`
+  <chr>                 <dbl>          <dbl>
+1 04/26/2021            15830         145215
+# A tibble: 1 x 4
+  Date      `Total COVID-19 Confirmed in~ `Total Deaths` `Total Cumulative COVI~
+  <chr>                             <dbl>          <dbl>                   <dbl>
+1 04/26/20~                          1094              9                   12486
+# A tibble: 1 x 6
+  Date     `Total Detained` `Total Cumulative COV~ `Total Tested` `Total Deaths`
+  <chr>               <dbl>                  <dbl>          <dbl>          <dbl>
+1 04/26/2~            15830                  12486         145215              9
+# ... with 1 more variable: Total COVID-19 Confirmed in Custody <dbl>
+# A tibble: 130 x 5
+   Date   `Custody/AOR/Fac~ `Confirmed cases ~ `Detainee death~ `Total confirme~
+   <chr>  <chr>             <chr>              <chr>            <chr>           
+ 1 04/26~ Charleston Count~ 0                  0                2               
+ 2 04/26~ Columbia Regiona~ 0                  0                1               
+ 3 04/26~ Folkston ICE Pro~ 10                 0                114             
+ 4 04/26~ Irwin County Det~ 0                  0                71              
+ 5 04/26~ Robert A. Deyton~ 0                  0                6               
+ 6 04/26~ Sheriff Al Canno~ 0                  0                1               
+ 7 04/26~ Stewart Detentio~ 3                  4                496             
+ 8 04/26~ Howard County De~ 0                  0                2               
+ 9 04/26~ Worcester County~ 0                  0                1               
+10 04/26~ Bristol County D~ 0                  0                9               
+# ... with 120 more rows
+-- Attaching packages --------------------------------------- tidyverse 1.3.0 --
+v ggplot2 3.3.3     v purrr   0.3.4
+v tibble  3.1.0     v dplyr   1.0.5
+v tidyr   1.1.3     v stringr 1.4.0
+v readr   1.4.0     v forcats 0.5.1
+-- Conflicts ------------------------------------------ tidyverse_conflicts() --
+x dplyr::filter()         masks stats::filter()
+x readr::guess_encoding() masks rvest::guess_encoding()
+x dplyr::lag()            masks stats::lag()
+# A tibble: 1 x 3
+  Date       `Total Detained` `Total Tested`
+  <chr>                 <dbl>          <dbl>
+1 04/27/2021            15830         145215
+# A tibble: 1 x 4
+  Date      `Total COVID-19 Confirmed in~ `Total Deaths` `Total Cumulative COVI~
+  <chr>                             <dbl>          <dbl>                   <dbl>
+1 04/27/20~                          1147              9                   12549
+# A tibble: 1 x 6
+  Date     `Total Detained` `Total Cumulative COV~ `Total Tested` `Total Deaths`
+  <chr>               <dbl>                  <dbl>          <dbl>          <dbl>
+1 04/27/2~            15830                  12549         145215              9
+# ... with 1 more variable: Total COVID-19 Confirmed in Custody <dbl>
+# A tibble: 130 x 5
+   Date   `Custody/AOR/Fac~ `Confirmed cases ~ `Detainee death~ `Total confirme~
+   <chr>  <chr>             <chr>              <chr>            <chr>           
+ 1 04/27~ Charleston Count~ 0                  0                2               
+ 2 04/27~ Columbia Regiona~ 0                  0                1               
+ 3 04/27~ Folkston ICE Pro~ 10                 0                114             
+ 4 04/27~ Irwin County Det~ 0                  0                71              
+ 5 04/27~ Robert A. Deyton~ 0                  0                6               
+ 6 04/27~ Sheriff Al Canno~ 0                  0                1               
+ 7 04/27~ Stewart Detentio~ 3                  4                496             
+ 8 04/27~ Howard County De~ 0                  0                2               
+ 9 04/27~ Worcester County~ 0                  0                1               
+10 04/27~ Bristol County D~ 0                  0                9               
+# ... with 120 more rows
+-- Attaching packages --------------------------------------- tidyverse 1.3.0 --
+v ggplot2 3.3.3     v purrr   0.3.4
+v tibble  3.1.0     v dplyr   1.0.5
+v tidyr   1.1.3     v stringr 1.4.0
+v readr   1.4.0     v forcats 0.5.1
+-- Conflicts ------------------------------------------ tidyverse_conflicts() --
+x dplyr::filter()         masks stats::filter()
+x readr::guess_encoding() masks rvest::guess_encoding()
+x dplyr::lag()            masks stats::lag()
+# A tibble: 1 x 3
+  Date       `Total Detained` `Total Tested`
+  <chr>                 <dbl>          <dbl>
+1 04/28/2021            15830         145215
+# A tibble: 1 x 4
+  Date      `Total COVID-19 Confirmed in~ `Total Deaths` `Total Cumulative COVI~
+  <chr>                             <dbl>          <dbl>                   <dbl>
+1 04/28/20~                          1278              9                   12757
+# A tibble: 1 x 6
+  Date     `Total Detained` `Total Cumulative COV~ `Total Tested` `Total Deaths`
+  <chr>               <dbl>                  <dbl>          <dbl>          <dbl>
+1 04/28/2~            15830                  12757         145215              9
+# ... with 1 more variable: Total COVID-19 Confirmed in Custody <dbl>
+# A tibble: 130 x 5
+   Date   `Custody/AOR/Fac~ `Confirmed cases ~ `Detainee death~ `Total confirme~
+   <chr>  <chr>             <chr>              <chr>            <chr>           
+ 1 04/28~ Charleston Count~ 0                  0                2               
+ 2 04/28~ Columbia Regiona~ 0                  0                1               
+ 3 04/28~ Folkston ICE Pro~ 17                 0                121             
+ 4 04/28~ Irwin County Det~ 0                  0                71              
+ 5 04/28~ Robert A. Deyton~ 0                  0                6               
+ 6 04/28~ Sheriff Al Canno~ 0                  0                1               
+ 7 04/28~ Stewart Detentio~ 6                  4                499             
+ 8 04/28~ Howard County De~ 0                  0                2               
+ 9 04/28~ Worcester County~ 0                  0                1               
+10 04/28~ Bristol County D~ 0                  0                9               
+# ... with 120 more rows
+-- Attaching packages --------------------------------------- tidyverse 1.3.0 --
+v ggplot2 3.3.3     v purrr   0.3.4
+v tibble  3.1.0     v dplyr   1.0.5
+v tidyr   1.1.3     v stringr 1.4.0
+v readr   1.4.0     v forcats 0.5.1
+-- Conflicts ------------------------------------------ tidyverse_conflicts() --
+x dplyr::filter()         masks stats::filter()
+x readr::guess_encoding() masks rvest::guess_encoding()
+x dplyr::lag()            masks stats::lag()
+# A tibble: 1 x 3
+  Date       `Total Detained` `Total Tested`
+  <chr>                 <dbl>          <dbl>
+1 04/29/2021            15830         145215
+# A tibble: 1 x 4
+  Date      `Total COVID-19 Confirmed in~ `Total Deaths` `Total Cumulative COVI~
+  <chr>                             <dbl>          <dbl>                   <dbl>
+1 04/29/20~                          1320              9                   12841
+# A tibble: 1 x 6
+  Date     `Total Detained` `Total Cumulative COV~ `Total Tested` `Total Deaths`
+  <chr>               <dbl>                  <dbl>          <dbl>          <dbl>
+1 04/29/2~            15830                  12841         145215              9
+# ... with 1 more variable: Total COVID-19 Confirmed in Custody <dbl>
+# A tibble: 130 x 5
+   Date   `Custody/AOR/Fac~ `Confirmed cases ~ `Detainee death~ `Total confirme~
+   <chr>  <chr>             <chr>              <chr>            <chr>           
+ 1 04/29~ Charleston Count~ 0                  0                2               
+ 2 04/29~ Columbia Regiona~ 0                  0                1               
+ 3 04/29~ Folkston ICE Pro~ 17                 0                121             
+ 4 04/29~ Irwin County Det~ 0                  0                71              
+ 5 04/29~ Robert A. Deyton~ 0                  0                6               
+ 6 04/29~ Sheriff Al Canno~ 0                  0                1               
+ 7 04/29~ Stewart Detentio~ 6                  4                499             
+ 8 04/29~ Howard County De~ 0                  0                2               
+ 9 04/29~ Worcester County~ 0                  0                1               
+10 04/29~ Bristol County D~ 0                  0                9               
+# ... with 120 more rows
+-- Attaching packages --------------------------------------- tidyverse 1.3.0 --
+v ggplot2 3.3.3     v purrr   0.3.4
+v tibble  3.1.0     v dplyr   1.0.5
+v tidyr   1.1.3     v stringr 1.4.0
+v readr   1.4.0     v forcats 0.5.1
+-- Conflicts ------------------------------------------ tidyverse_conflicts() --
+x dplyr::filter()         masks stats::filter()
+x readr::guess_encoding() masks rvest::guess_encoding()
+x dplyr::lag()            masks stats::lag()
+# A tibble: 1 x 3
+  Date       `Total Detained` `Total Tested`
+  <chr>                 <dbl>          <dbl>
+1 04/30/2021            15830         145215
+# A tibble: 1 x 4
+  Date      `Total COVID-19 Confirmed in~ `Total Deaths` `Total Cumulative COVI~
+  <chr>                             <dbl>          <dbl>                   <dbl>
+1 04/30/20~                          1393              9                   12947
+# A tibble: 1 x 6
+  Date     `Total Detained` `Total Cumulative COV~ `Total Tested` `Total Deaths`
+  <chr>               <dbl>                  <dbl>          <dbl>          <dbl>
+1 04/30/2~            15830                  12947         145215              9
+# ... with 1 more variable: Total COVID-19 Confirmed in Custody <dbl>
+# A tibble: 130 x 5
+   Date   `Custody/AOR/Fac~ `Confirmed cases ~ `Detainee death~ `Total confirme~
+   <chr>  <chr>             <chr>              <chr>            <chr>           
+ 1 04/30~ Charleston Count~ 0                  0                2               
+ 2 04/30~ Columbia Regiona~ 0                  0                1               
+ 3 04/30~ Folkston ICE Pro~ 17                 0                121             
+ 4 04/30~ Irwin County Det~ 0                  0                71              
+ 5 04/30~ Robert A. Deyton~ 0                  0                6               
+ 6 04/30~ Sheriff Al Canno~ 0                  0                1               
+ 7 04/30~ Stewart Detentio~ 6                  4                499             
+ 8 04/30~ Howard County De~ 0                  0                2               
+ 9 04/30~ Worcester County~ 0                  0                1               
+10 04/30~ Bristol County D~ 0                  0                9               
+# ... with 120 more rows
+-- Attaching packages --------------------------------------- tidyverse 1.3.0 --
+v ggplot2 3.3.3     v purrr   0.3.4
+v tibble  3.1.0     v dplyr   1.0.5
+v tidyr   1.1.3     v stringr 1.4.0
+v readr   1.4.0     v forcats 0.5.1
+-- Conflicts ------------------------------------------ tidyverse_conflicts() --
+x dplyr::filter()         masks stats::filter()
+x readr::guess_encoding() masks rvest::guess_encoding()
+x dplyr::lag()            masks stats::lag()
+# A tibble: 1 x 3
+  Date       `Total Detained` `Total Tested`
+  <chr>                 <dbl>          <dbl>
+1 05/01/2021            15830         145215
+# A tibble: 1 x 4
+  Date      `Total COVID-19 Confirmed in~ `Total Deaths` `Total Cumulative COVI~
+  <chr>                             <dbl>          <dbl>                   <dbl>
+1 05/01/20~                          1393              9                   12947
+# A tibble: 1 x 6
+  Date     `Total Detained` `Total Cumulative COV~ `Total Tested` `Total Deaths`
+  <chr>               <dbl>                  <dbl>          <dbl>          <dbl>
+1 05/01/2~            15830                  12947         145215              9
+# ... with 1 more variable: Total COVID-19 Confirmed in Custody <dbl>
+# A tibble: 130 x 5
+   Date   `Custody/AOR/Fac~ `Confirmed cases ~ `Detainee death~ `Total confirme~
+   <chr>  <chr>             <chr>              <chr>            <chr>           
+ 1 05/01~ Charleston Count~ 0                  0                2               
+ 2 05/01~ Columbia Regiona~ 0                  0                1               
+ 3 05/01~ Folkston ICE Pro~ 17                 0                121             
+ 4 05/01~ Irwin County Det~ 0                  0                71              
+ 5 05/01~ Robert A. Deyton~ 0                  0                6               
+ 6 05/01~ Sheriff Al Canno~ 0                  0                1               
+ 7 05/01~ Stewart Detentio~ 6                  4                499             
+ 8 05/01~ Howard County De~ 0                  0                2               
+ 9 05/01~ Worcester County~ 0                  0                1               
+10 05/01~ Bristol County D~ 0                  0                9               
+# ... with 120 more rows
+-- Attaching packages --------------------------------------- tidyverse 1.3.0 --
+v ggplot2 3.3.3     v purrr   0.3.4
+v tibble  3.1.0     v dplyr   1.0.5
+v tidyr   1.1.3     v stringr 1.4.0
+v readr   1.4.0     v forcats 0.5.1
+-- Conflicts ------------------------------------------ tidyverse_conflicts() --
+x dplyr::filter()         masks stats::filter()
+x readr::guess_encoding() masks rvest::guess_encoding()
+x dplyr::lag()            masks stats::lag()
+# A tibble: 1 x 3
+  Date       `Total Detained` `Total Tested`
+  <chr>                 <dbl>          <dbl>
+1 05/02/2021            15830         145215
+# A tibble: 1 x 4
+  Date      `Total COVID-19 Confirmed in~ `Total Deaths` `Total Cumulative COVI~
+  <chr>                             <dbl>          <dbl>                   <dbl>
+1 05/02/20~                          1393              9                   12947
+# A tibble: 1 x 6
+  Date     `Total Detained` `Total Cumulative COV~ `Total Tested` `Total Deaths`
+  <chr>               <dbl>                  <dbl>          <dbl>          <dbl>
+1 05/02/2~            15830                  12947         145215              9
+# ... with 1 more variable: Total COVID-19 Confirmed in Custody <dbl>
+# A tibble: 130 x 5
+   Date   `Custody/AOR/Fac~ `Confirmed cases ~ `Detainee death~ `Total confirme~
+   <chr>  <chr>             <chr>              <chr>            <chr>           
+ 1 05/02~ Charleston Count~ 0                  0                2               
+ 2 05/02~ Columbia Regiona~ 0                  0                1               
+ 3 05/02~ Folkston ICE Pro~ 17                 0                121             
+ 4 05/02~ Irwin County Det~ 0                  0                71              
+ 5 05/02~ Robert A. Deyton~ 0                  0                6               
+ 6 05/02~ Sheriff Al Canno~ 0                  0                1               
+ 7 05/02~ Stewart Detentio~ 6                  4                499             
+ 8 05/02~ Howard County De~ 0                  0                2               
+ 9 05/02~ Worcester County~ 0                  0                1               
+10 05/02~ Bristol County D~ 0                  0                9               
+# ... with 120 more rows
+-- Attaching packages --------------------------------------- tidyverse 1.3.0 --
+v ggplot2 3.3.3     v purrr   0.3.4
+v tibble  3.1.0     v dplyr   1.0.5
+v tidyr   1.1.3     v stringr 1.4.0
+v readr   1.4.0     v forcats 0.5.1
+-- Conflicts ------------------------------------------ tidyverse_conflicts() --
+x dplyr::filter()         masks stats::filter()
+x readr::guess_encoding() masks rvest::guess_encoding()
+x dplyr::lag()            masks stats::lag()
+# A tibble: 1 x 3
+  Date       `Total Detained` `Total Tested`
+  <chr>                 <dbl>          <dbl>
+1 05/03/2021            15830         145215
+# A tibble: 1 x 4
+  Date      `Total COVID-19 Confirmed in~ `Total Deaths` `Total Cumulative COVI~
+  <chr>                             <dbl>          <dbl>                   <dbl>
+1 05/03/20~                          1393              9                   12947
+# A tibble: 1 x 6
+  Date     `Total Detained` `Total Cumulative COV~ `Total Tested` `Total Deaths`
+  <chr>               <dbl>                  <dbl>          <dbl>          <dbl>
+1 05/03/2~            15830                  12947         145215              9
+# ... with 1 more variable: Total COVID-19 Confirmed in Custody <dbl>
+# A tibble: 130 x 5
+   Date   `Custody/AOR/Fac~ `Confirmed cases ~ `Detainee death~ `Total confirme~
+   <chr>  <chr>             <chr>              <chr>            <chr>           
+ 1 05/03~ Charleston Count~ 0                  0                2               
+ 2 05/03~ Columbia Regiona~ 0                  0                1               
+ 3 05/03~ Folkston ICE Pro~ 17                 0                121             
+ 4 05/03~ Irwin County Det~ 0                  0                71              
+ 5 05/03~ Robert A. Deyton~ 0                  0                6               
+ 6 05/03~ Sheriff Al Canno~ 0                  0                1               
+ 7 05/03~ Stewart Detentio~ 6                  4                499             
+ 8 05/03~ Howard County De~ 0                  0                2               
+ 9 05/03~ Worcester County~ 0                  0                1               
+10 05/03~ Bristol County D~ 0                  0                9               
+# ... with 120 more rows
+-- Attaching packages --------------------------------------- tidyverse 1.3.0 --
+v ggplot2 3.3.3     v purrr   0.3.4
+v tibble  3.1.0     v dplyr   1.0.5
+v tidyr   1.1.3     v stringr 1.4.0
+v readr   1.4.0     v forcats 0.5.1
+-- Conflicts ------------------------------------------ tidyverse_conflicts() --
+x dplyr::filter()         masks stats::filter()
+x readr::guess_encoding() masks rvest::guess_encoding()
+x dplyr::lag()            masks stats::lag()
+# A tibble: 1 x 3
+  Date       `Total Detained` `Total Tested`
+  <chr>                 <dbl>          <dbl>
+1 05/04/2021            16721         151204
+# A tibble: 1 x 4
+  Date      `Total COVID-19 Confirmed in~ `Total Deaths` `Total Cumulative COVI~
+  <chr>                             <dbl>          <dbl>                   <dbl>
+1 05/04/20~                          1393              9                   13147
+# A tibble: 1 x 6
+  Date     `Total Detained` `Total Cumulative COV~ `Total Tested` `Total Deaths`
+  <chr>               <dbl>                  <dbl>          <dbl>          <dbl>
+1 05/04/2~            16721                  13147         151204              9
+# ... with 1 more variable: Total COVID-19 Confirmed in Custody <dbl>
+# A tibble: 130 x 5
+   Date   `Custody/AOR/Fac~ `Confirmed cases ~ `Detainee death~ `Total confirme~
+   <chr>  <chr>             <chr>              <chr>            <chr>           
+ 1 05/04~ Charleston Count~ 0                  0                2               
+ 2 05/04~ Columbia Regiona~ 0                  0                1               
+ 3 05/04~ Folkston ICE Pro~ 17                 0                125             
+ 4 05/04~ Irwin County Det~ 0                  0                71              
+ 5 05/04~ Robert A. Deyton~ 0                  0                6               
+ 6 05/04~ Sheriff Al Canno~ 0                  0                1               
+ 7 05/04~ Stewart Detentio~ 6                  4                499             
+ 8 05/04~ Howard County De~ 0                  0                2               
+ 9 05/04~ Worcester County~ 0                  0                1               
+10 05/04~ Bristol County D~ 0                  0                9               
+# ... with 120 more rows
+-- Attaching packages --------------------------------------- tidyverse 1.3.0 --
+v ggplot2 3.3.3     v purrr   0.3.4
+v tibble  3.1.0     v dplyr   1.0.5
+v tidyr   1.1.3     v stringr 1.4.0
+v readr   1.4.0     v forcats 0.5.1
+-- Conflicts ------------------------------------------ tidyverse_conflicts() --
+x dplyr::filter()         masks stats::filter()
+x readr::guess_encoding() masks rvest::guess_encoding()
+x dplyr::lag()            masks stats::lag()
+# A tibble: 1 x 3
+  Date       `Total Detained` `Total Tested`
+  <chr>                 <dbl>          <dbl>
+1 05/05/2021            16721         151204
+# A tibble: 1 x 4
+  Date      `Total COVID-19 Confirmed in~ `Total Deaths` `Total Cumulative COVI~
+  <chr>                             <dbl>          <dbl>                   <dbl>
+1 05/05/20~                          1397              9                   13371
+# A tibble: 1 x 6
+  Date     `Total Detained` `Total Cumulative COV~ `Total Tested` `Total Deaths`
+  <chr>               <dbl>                  <dbl>          <dbl>          <dbl>
+1 05/05/2~            16721                  13371         151204              9
+# ... with 1 more variable: Total COVID-19 Confirmed in Custody <dbl>
+# A tibble: 130 x 5
+   Date   `Custody/AOR/Fac~ `Confirmed cases ~ `Detainee death~ `Total confirme~
+   <chr>  <chr>             <chr>              <chr>            <chr>           
+ 1 05/05~ Charleston Count~ 0                  0                2               
+ 2 05/05~ Columbia Regiona~ 0                  0                1               
+ 3 05/05~ Folkston ICE Pro~ 28                 0                132             
+ 4 05/05~ Irwin County Det~ 0                  0                71              
+ 5 05/05~ Robert A. Deyton~ 0                  0                6               
+ 6 05/05~ Sheriff Al Canno~ 0                  0                1               
+ 7 05/05~ Stewart Detentio~ 6                  4                499             
+ 8 05/05~ Howard County De~ 0                  0                2               
+ 9 05/05~ Worcester County~ 0                  0                1               
+10 05/05~ Bristol County D~ 0                  0                9               
+# ... with 120 more rows
+-- Attaching packages --------------------------------------- tidyverse 1.3.0 --
+v ggplot2 3.3.3     v purrr   0.3.4
+v tibble  3.1.0     v dplyr   1.0.5
+v tidyr   1.1.3     v stringr 1.4.0
+v readr   1.4.0     v forcats 0.5.1
+-- Conflicts ------------------------------------------ tidyverse_conflicts() --
+x dplyr::filter()         masks stats::filter()
+x readr::guess_encoding() masks rvest::guess_encoding()
+x dplyr::lag()            masks stats::lag()
+# A tibble: 1 x 3
+  Date       `Total Detained` `Total Tested`
+  <chr>                 <dbl>          <dbl>
+1 05/06/2021            16721         151204
+# A tibble: 1 x 4
+  Date      `Total COVID-19 Confirmed in~ `Total Deaths` `Total Cumulative COVI~
+  <chr>                             <dbl>          <dbl>                   <dbl>
+1 05/06/20~                          1537              9                   13554
+# A tibble: 1 x 6
+  Date     `Total Detained` `Total Cumulative COV~ `Total Tested` `Total Deaths`
+  <chr>               <dbl>                  <dbl>          <dbl>          <dbl>
+1 05/06/2~            16721                  13554         151204              9
+# ... with 1 more variable: Total COVID-19 Confirmed in Custody <dbl>
+# A tibble: 130 x 5
+   Date   `Custody/AOR/Fac~ `Confirmed cases ~ `Detainee death~ `Total confirme~
+   <chr>  <chr>             <chr>              <chr>            <chr>           
+ 1 05/06~ Charleston Count~ 0                  0                2               
+ 2 05/06~ Columbia Regiona~ 0                  0                1               
+ 3 05/06~ Folkston ICE Pro~ 33                 0                137             
+ 4 05/06~ Irwin County Det~ 0                  0                71              
+ 5 05/06~ Robert A. Deyton~ 0                  0                6               
+ 6 05/06~ Sheriff Al Canno~ 0                  0                1               
+ 7 05/06~ Stewart Detentio~ 5                  4                499             
+ 8 05/06~ Howard County De~ 0                  0                2               
+ 9 05/06~ Worcester County~ 0                  0                1               
+10 05/06~ Bristol County D~ 0                  0                9               
+# ... with 120 more rows
+-- Attaching packages --------------------------------------- tidyverse 1.3.0 --
+v ggplot2 3.3.3     v purrr   0.3.4
+v tibble  3.1.0     v dplyr   1.0.5
+v tidyr   1.1.3     v stringr 1.4.0
+v readr   1.4.0     v forcats 0.5.1
+-- Conflicts ------------------------------------------ tidyverse_conflicts() --
+x dplyr::filter()         masks stats::filter()
+x readr::guess_encoding() masks rvest::guess_encoding()
+x dplyr::lag()            masks stats::lag()
+# A tibble: 1 x 3
+  Date       `Total Detained` `Total Tested`
+  <chr>                 <dbl>          <dbl>
+1 05/07/2021            16721         151204
+# A tibble: 1 x 4
+  Date      `Total COVID-19 Confirmed in~ `Total Deaths` `Total Cumulative COVI~
+  <chr>                             <dbl>          <dbl>                   <dbl>
+1 05/07/20~                          1594              9                   13754
+# A tibble: 1 x 6
+  Date     `Total Detained` `Total Cumulative COV~ `Total Tested` `Total Deaths`
+  <chr>               <dbl>                  <dbl>          <dbl>          <dbl>
+1 05/07/2~            16721                  13754         151204              9
+# ... with 1 more variable: Total COVID-19 Confirmed in Custody <dbl>
+# A tibble: 130 x 5
+   Date   `Custody/AOR/Fac~ `Confirmed cases ~ `Detainee death~ `Total confirme~
+   <chr>  <chr>             <chr>              <chr>            <chr>           
+ 1 05/07~ Charleston Count~ 0                  0                2               
+ 2 05/07~ Columbia Regiona~ 0                  0                1               
+ 3 05/07~ Folkston ICE Pro~ 33                 0                137             
+ 4 05/07~ Irwin County Det~ 0                  0                71              
+ 5 05/07~ Robert A. Deyton~ 0                  0                6               
+ 6 05/07~ Sheriff Al Canno~ 0                  0                1               
+ 7 05/07~ Stewart Detentio~ 5                  4                499             
+ 8 05/07~ Howard County De~ 0                  0                2               
+ 9 05/07~ Worcester County~ 0                  0                1               
+10 05/07~ Bristol County D~ 0                  0                9               
+# ... with 120 more rows
+-- Attaching packages --------------------------------------- tidyverse 1.3.0 --
+v ggplot2 3.3.3     v purrr   0.3.4
+v tibble  3.1.0     v dplyr   1.0.5
+v tidyr   1.1.3     v stringr 1.4.0
+v readr   1.4.0     v forcats 0.5.1
+-- Conflicts ------------------------------------------ tidyverse_conflicts() --
+x dplyr::filter()         masks stats::filter()
+x readr::guess_encoding() masks rvest::guess_encoding()
+x dplyr::lag()            masks stats::lag()
+# A tibble: 1 x 3
+  Date       `Total Detained` `Total Tested`
+  <chr>                 <dbl>          <dbl>
+1 05/08/2021            16721         151204
+# A tibble: 1 x 4
+  Date      `Total COVID-19 Confirmed in~ `Total Deaths` `Total Cumulative COVI~
+  <chr>                             <dbl>          <dbl>                   <dbl>
+1 05/08/20~                          1594              9                   13754
+# A tibble: 1 x 6
+  Date     `Total Detained` `Total Cumulative COV~ `Total Tested` `Total Deaths`
+  <chr>               <dbl>                  <dbl>          <dbl>          <dbl>
+1 05/08/2~            16721                  13754         151204              9
+# ... with 1 more variable: Total COVID-19 Confirmed in Custody <dbl>
+# A tibble: 130 x 5
+   Date   `Custody/AOR/Fac~ `Confirmed cases ~ `Detainee death~ `Total confirme~
+   <chr>  <chr>             <chr>              <chr>            <chr>           
+ 1 05/08~ Charleston Count~ 0                  0                2               
+ 2 05/08~ Columbia Regiona~ 0                  0                1               
+ 3 05/08~ Folkston ICE Pro~ 33                 0                137             
+ 4 05/08~ Irwin County Det~ 0                  0                71              
+ 5 05/08~ Robert A. Deyton~ 0                  0                6               
+ 6 05/08~ Sheriff Al Canno~ 0                  0                1               
+ 7 05/08~ Stewart Detentio~ 5                  4                499             
+ 8 05/08~ Howard County De~ 0                  0                2               
+ 9 05/08~ Worcester County~ 0                  0                1               
+10 05/08~ Bristol County D~ 0                  0                9               
+# ... with 120 more rows
+-- Attaching packages --------------------------------------- tidyverse 1.3.0 --
+v ggplot2 3.3.3     v purrr   0.3.4
+v tibble  3.1.0     v dplyr   1.0.5
+v tidyr   1.1.3     v stringr 1.4.0
+v readr   1.4.0     v forcats 0.5.1
+-- Conflicts ------------------------------------------ tidyverse_conflicts() --
+x dplyr::filter()         masks stats::filter()
+x readr::guess_encoding() masks rvest::guess_encoding()
+x dplyr::lag()            masks stats::lag()
+# A tibble: 1 x 3
+  Date       `Total Detained` `Total Tested`
+  <chr>                 <dbl>          <dbl>
+1 05/09/2021            16721         151204
+# A tibble: 1 x 4
+  Date      `Total COVID-19 Confirmed in~ `Total Deaths` `Total Cumulative COVI~
+  <chr>                             <dbl>          <dbl>                   <dbl>
+1 05/09/20~                          1594              9                   13754
+# A tibble: 1 x 6
+  Date     `Total Detained` `Total Cumulative COV~ `Total Tested` `Total Deaths`
+  <chr>               <dbl>                  <dbl>          <dbl>          <dbl>
+1 05/09/2~            16721                  13754         151204              9
+# ... with 1 more variable: Total COVID-19 Confirmed in Custody <dbl>
+# A tibble: 130 x 5
+   Date   `Custody/AOR/Fac~ `Confirmed cases ~ `Detainee death~ `Total confirme~
+   <chr>  <chr>             <chr>              <chr>            <chr>           
+ 1 05/09~ Charleston Count~ 0                  0                2               
+ 2 05/09~ Columbia Regiona~ 0                  0                1               
+ 3 05/09~ Folkston ICE Pro~ 33                 0                137             
+ 4 05/09~ Irwin County Det~ 0                  0                71              
+ 5 05/09~ Robert A. Deyton~ 0                  0                6               
+ 6 05/09~ Sheriff Al Canno~ 0                  0                1               
+ 7 05/09~ Stewart Detentio~ 5                  4                499             
+ 8 05/09~ Howard County De~ 0                  0                2               
+ 9 05/09~ Worcester County~ 0                  0                1               
+10 05/09~ Bristol County D~ 0                  0                9               
+# ... with 120 more rows
+-- Attaching packages --------------------------------------- tidyverse 1.3.0 --
+v ggplot2 3.3.3     v purrr   0.3.4
+v tibble  3.1.0     v dplyr   1.0.5
+v tidyr   1.1.3     v stringr 1.4.0
+v readr   1.4.0     v forcats 0.5.1
+-- Conflicts ------------------------------------------ tidyverse_conflicts() --
+x dplyr::filter()         masks stats::filter()
+x readr::guess_encoding() masks rvest::guess_encoding()
+x dplyr::lag()            masks stats::lag()
+# A tibble: 1 x 3
+  Date       `Total Detained` `Total Tested`
+  <chr>                 <dbl>          <dbl>
+1 05/10/2021            16721         158476
+# A tibble: 1 x 4
+  Date      `Total COVID-19 Confirmed in~ `Total Deaths` `Total Cumulative COVI~
+  <chr>                             <dbl>          <dbl>                   <dbl>
+1 05/10/20~                          1906              9                   14057
+# A tibble: 1 x 6
+  Date     `Total Detained` `Total Cumulative COV~ `Total Tested` `Total Deaths`
+  <chr>               <dbl>                  <dbl>          <dbl>          <dbl>
+1 05/10/2~            16721                  14057         158476              9
+# ... with 1 more variable: Total COVID-19 Confirmed in Custody <dbl>
+# A tibble: 130 x 5
+   Date   `Custody/AOR/Fac~ `Confirmed cases ~ `Detainee death~ `Total confirme~
+   <chr>  <chr>             <chr>              <chr>            <chr>           
+ 1 05/10~ Charleston Count~ 0                  0                2               
+ 2 05/10~ Columbia Regiona~ 0                  0                1               
+ 3 05/10~ Folkston ICE Pro~ 85                 0                190             
+ 4 05/10~ Irwin County Det~ 0                  0                71              
+ 5 05/10~ Robert A. Deyton~ 0                  0                6               
+ 6 05/10~ Sheriff Al Canno~ 0                  0                1               
+ 7 05/10~ Stewart Detentio~ 17                 4                511             
+ 8 05/10~ Howard County De~ 0                  0                2               
+ 9 05/10~ Worcester County~ 0                  0                1               
+10 05/10~ Bristol County D~ 0                  0                9               
+# ... with 120 more rows
+-- Attaching packages --------------------------------------- tidyverse 1.3.0 --
+v ggplot2 3.3.3     v purrr   0.3.4
+v tibble  3.1.0     v dplyr   1.0.5
+v tidyr   1.1.3     v stringr 1.4.0
+v readr   1.4.0     v forcats 0.5.1
+-- Conflicts ------------------------------------------ tidyverse_conflicts() --
+x dplyr::filter()         masks stats::filter()
+x readr::guess_encoding() masks rvest::guess_encoding()
+x dplyr::lag()            masks stats::lag()
+# A tibble: 1 x 3
+  Date       `Total Detained` `Total Tested`
+  <chr>                 <dbl>          <dbl>
+1 05/11/2021            16721         158476
+# A tibble: 1 x 4
+  Date      `Total COVID-19 Confirmed in~ `Total Deaths` `Total Cumulative COVI~
+  <chr>                             <dbl>          <dbl>                   <dbl>
+1 05/11/20~                          1941              9                    1409
+# A tibble: 1 x 6
+  Date     `Total Detained` `Total Cumulative COV~ `Total Tested` `Total Deaths`
+  <chr>               <dbl>                  <dbl>          <dbl>          <dbl>
+1 05/11/2~            16721                   1409         158476              9
+# ... with 1 more variable: Total COVID-19 Confirmed in Custody <dbl>
+# A tibble: 130 x 5
+   Date   `Custody/AOR/Fac~ `Confirmed cases ~ `Detainee death~ `Total confirme~
+   <chr>  <chr>             <chr>              <chr>            <chr>           
+ 1 05/11~ Charleston Count~ 0                  0                2               
+ 2 05/11~ Columbia Regiona~ 0                  0                1               
+ 3 05/11~ Folkston ICE Pro~ 85                 0                190             
+ 4 05/11~ Irwin County Det~ 0                  0                71              
+ 5 05/11~ Robert A. Deyton~ 0                  0                6               
+ 6 05/11~ Sheriff Al Canno~ 0                  0                1               
+ 7 05/11~ Stewart Detentio~ 18                 4                512             
+ 8 05/11~ Howard County De~ 0                  0                2               
+ 9 05/11~ Worcester County~ 0                  0                1               
+10 05/11~ Bristol County D~ 0                  0                9               
+# ... with 120 more rows
+-- Attaching packages --------------------------------------- tidyverse 1.3.0 --
+v ggplot2 3.3.3     v purrr   0.3.4
+v tibble  3.1.0     v dplyr   1.0.5
+v tidyr   1.1.3     v stringr 1.4.0
+v readr   1.4.0     v forcats 0.5.1
+-- Conflicts ------------------------------------------ tidyverse_conflicts() --
+x dplyr::filter()         masks stats::filter()
+x readr::guess_encoding() masks rvest::guess_encoding()
+x dplyr::lag()            masks stats::lag()
+# A tibble: 1 x 3
+  Date       `Total Detained` `Total Tested`
+  <chr>                 <dbl>          <dbl>
+1 05/12/2021            16721         158476
+# A tibble: 1 x 4
+  Date      `Total COVID-19 Confirmed in~ `Total Deaths` `Total Cumulative COVI~
+  <chr>                             <dbl>          <dbl>                   <dbl>
+1 05/12/20~                          2033              9                   14231
+# A tibble: 1 x 6
+  Date     `Total Detained` `Total Cumulative COV~ `Total Tested` `Total Deaths`
+  <chr>               <dbl>                  <dbl>          <dbl>          <dbl>
+1 05/12/2~            16721                  14231         158476              9
+# ... with 1 more variable: Total COVID-19 Confirmed in Custody <dbl>
+# A tibble: 130 x 5
+   Date   `Custody/AOR/Fac~ `Confirmed cases ~ `Detainee death~ `Total confirme~
+   <chr>  <chr>             <chr>              <chr>            <chr>           
+ 1 05/12~ Charleston Count~ 0                  0                2               
+ 2 05/12~ Columbia Regiona~ 0                  0                1               
+ 3 05/12~ Folkston ICE Pro~ 87                 0                192             
+ 4 05/12~ Irwin County Det~ 0                  0                71              
+ 5 05/12~ Robert A. Deyton~ 0                  0                6               
+ 6 05/12~ Sheriff Al Canno~ 0                  0                1               
+ 7 05/12~ Stewart Detentio~ 18                 4                512             
+ 8 05/12~ Howard County De~ 0                  0                2               
+ 9 05/12~ Worcester County~ 0                  0                1               
+10 05/12~ Bristol County D~ 0                  0                9               
+# ... with 120 more rows
+-- Attaching packages --------------------------------------- tidyverse 1.3.0 --
+v ggplot2 3.3.3     v purrr   0.3.4
+v tibble  3.1.0     v dplyr   1.0.5
+v tidyr   1.1.3     v stringr 1.4.0
+v readr   1.4.0     v forcats 0.5.1
+-- Conflicts ------------------------------------------ tidyverse_conflicts() --
+x dplyr::filter()         masks stats::filter()
+x readr::guess_encoding() masks rvest::guess_encoding()
+x dplyr::lag()            masks stats::lag()
+# A tibble: 1 x 3
+  Date       `Total Detained` `Total Tested`
+  <chr>                 <dbl>          <dbl>
+1 05/13/2021            16721         158476
+# A tibble: 1 x 4
+  Date      `Total COVID-19 Confirmed in~ `Total Deaths` `Total Cumulative COVI~
+  <chr>                             <dbl>          <dbl>                   <dbl>
+1 05/13/20~                          2043              9                   14385
+# A tibble: 1 x 6
+  Date     `Total Detained` `Total Cumulative COV~ `Total Tested` `Total Deaths`
+  <chr>               <dbl>                  <dbl>          <dbl>          <dbl>
+1 05/13/2~            16721                  14385         158476              9
+# ... with 1 more variable: Total COVID-19 Confirmed in Custody <dbl>
+# A tibble: 130 x 5
+   Date   `Custody/AOR/Fac~ `Confirmed cases ~ `Detainee death~ `Total confirme~
+   <chr>  <chr>             <chr>              <chr>            <chr>           
+ 1 05/13~ Charleston Count~ 0                  0                2               
+ 2 05/13~ Columbia Regiona~ 0                  0                1               
+ 3 05/13~ Folkston ICE Pro~ 87                 0                192             
+ 4 05/13~ Irwin County Det~ 0                  0                71              
+ 5 05/13~ Robert A. Deyton~ 0                  0                6               
+ 6 05/13~ Sheriff Al Canno~ 0                  0                1               
+ 7 05/13~ Stewart Detentio~ 21                 4                515             
+ 8 05/13~ Howard County De~ 0                  0                2               
+ 9 05/13~ Worcester County~ 0                  0                1               
+10 05/13~ Bristol County D~ 0                  0                9               
+# ... with 120 more rows
+-- Attaching packages --------------------------------------- tidyverse 1.3.0 --
+v ggplot2 3.3.3     v purrr   0.3.4
+v tibble  3.1.0     v dplyr   1.0.5
+v tidyr   1.1.3     v stringr 1.4.0
+v readr   1.4.0     v forcats 0.5.1
+-- Conflicts ------------------------------------------ tidyverse_conflicts() --
+x dplyr::filter()         masks stats::filter()
+x readr::guess_encoding() masks rvest::guess_encoding()
+x dplyr::lag()            masks stats::lag()
+# A tibble: 1 x 3
+  Date       `Total Detained` `Total Tested`
+  <chr>                 <dbl>          <dbl>
+1 05/14/2021            16721         158476
+# A tibble: 1 x 4
+  Date      `Total COVID-19 Confirmed in~ `Total Deaths` `Total Cumulative COVI~
+  <chr>                             <dbl>          <dbl>                   <dbl>
+1 05/14/20~                          2043              9                   14385
+# A tibble: 1 x 6
+  Date     `Total Detained` `Total Cumulative COV~ `Total Tested` `Total Deaths`
+  <chr>               <dbl>                  <dbl>          <dbl>          <dbl>
+1 05/14/2~            16721                  14385         158476              9
+# ... with 1 more variable: Total COVID-19 Confirmed in Custody <dbl>
+# A tibble: 130 x 5
+   Date   `Custody/AOR/Fac~ `Confirmed cases ~ `Detainee death~ `Total confirme~
+   <chr>  <chr>             <chr>              <chr>            <chr>           
+ 1 05/14~ Charleston Count~ 0                  0                2               
+ 2 05/14~ Columbia Regiona~ 0                  0                1               
+ 3 05/14~ Folkston ICE Pro~ 87                 0                192             
+ 4 05/14~ Irwin County Det~ 0                  0                71              
+ 5 05/14~ Robert A. Deyton~ 0                  0                6               
+ 6 05/14~ Sheriff Al Canno~ 0                  0                1               
+ 7 05/14~ Stewart Detentio~ 21                 4                515             
+ 8 05/14~ Howard County De~ 0                  0                2               
+ 9 05/14~ Worcester County~ 0                  0                1               
+10 05/14~ Bristol County D~ 0                  0                9               
+# ... with 120 more rows
+-- Attaching packages --------------------------------------- tidyverse 1.3.0 --
+v ggplot2 3.3.3     v purrr   0.3.4
+v tibble  3.1.0     v dplyr   1.0.5
+v tidyr   1.1.3     v stringr 1.4.0
+v readr   1.4.0     v forcats 0.5.1
+-- Conflicts ------------------------------------------ tidyverse_conflicts() --
+x dplyr::filter()         masks stats::filter()
+x readr::guess_encoding() masks rvest::guess_encoding()
+x dplyr::lag()            masks stats::lag()
+# A tibble: 1 x 3
+  Date       `Total Detained` `Total Tested`
+  <chr>                 <dbl>          <dbl>
+1 05/15/2021            16721         158476
+# A tibble: 1 x 4
+  Date      `Total COVID-19 Confirmed in~ `Total Deaths` `Total Cumulative COVI~
+  <chr>                             <dbl>          <dbl>                   <dbl>
+1 05/15/20~                          2043              9                   14385
+# A tibble: 1 x 6
+  Date     `Total Detained` `Total Cumulative COV~ `Total Tested` `Total Deaths`
+  <chr>               <dbl>                  <dbl>          <dbl>          <dbl>
+1 05/15/2~            16721                  14385         158476              9
+# ... with 1 more variable: Total COVID-19 Confirmed in Custody <dbl>
+# A tibble: 130 x 5
+   Date   `Custody/AOR/Fac~ `Confirmed cases ~ `Detainee death~ `Total confirme~
+   <chr>  <chr>             <chr>              <chr>            <chr>           
+ 1 05/15~ Charleston Count~ 0                  0                2               
+ 2 05/15~ Columbia Regiona~ 0                  0                1               
+ 3 05/15~ Folkston ICE Pro~ 87                 0                192             
+ 4 05/15~ Irwin County Det~ 0                  0                71              
+ 5 05/15~ Robert A. Deyton~ 0                  0                6               
+ 6 05/15~ Sheriff Al Canno~ 0                  0                1               
+ 7 05/15~ Stewart Detentio~ 21                 4                515             
+ 8 05/15~ Howard County De~ 0                  0                2               
+ 9 05/15~ Worcester County~ 0                  0                1               
+10 05/15~ Bristol County D~ 0                  0                9               
+# ... with 120 more rows
+-- Attaching packages --------------------------------------- tidyverse 1.3.0 --
+v ggplot2 3.3.3     v purrr   0.3.4
+v tibble  3.1.0     v dplyr   1.0.5
+v tidyr   1.1.3     v stringr 1.4.0
+v readr   1.4.0     v forcats 0.5.1
+-- Conflicts ------------------------------------------ tidyverse_conflicts() --
+x dplyr::filter()         masks stats::filter()
+x readr::guess_encoding() masks rvest::guess_encoding()
+x dplyr::lag()            masks stats::lag()
+# A tibble: 1 x 3
+  Date       `Total Detained` `Total Tested`
+  <chr>                 <dbl>          <dbl>
+1 05/16/2021            16721         158476
+# A tibble: 1 x 4
+  Date      `Total COVID-19 Confirmed in~ `Total Deaths` `Total Cumulative COVI~
+  <chr>                             <dbl>          <dbl>                   <dbl>
+1 05/16/20~                          2043              9                   14385
+# A tibble: 1 x 6
+  Date     `Total Detained` `Total Cumulative COV~ `Total Tested` `Total Deaths`
+  <chr>               <dbl>                  <dbl>          <dbl>          <dbl>
+1 05/16/2~            16721                  14385         158476              9
+# ... with 1 more variable: Total COVID-19 Confirmed in Custody <dbl>
+# A tibble: 130 x 5
+   Date   `Custody/AOR/Fac~ `Confirmed cases ~ `Detainee death~ `Total confirme~
+   <chr>  <chr>             <chr>              <chr>            <chr>           
+ 1 05/16~ Charleston Count~ 0                  0                2               
+ 2 05/16~ Columbia Regiona~ 0                  0                1               
+ 3 05/16~ Folkston ICE Pro~ 87                 0                192             
+ 4 05/16~ Irwin County Det~ 0                  0                71              
+ 5 05/16~ Robert A. Deyton~ 0                  0                6               
+ 6 05/16~ Sheriff Al Canno~ 0                  0                1               
+ 7 05/16~ Stewart Detentio~ 21                 4                515             
+ 8 05/16~ Howard County De~ 0                  0                2               
+ 9 05/16~ Worcester County~ 0                  0                1               
+10 05/16~ Bristol County D~ 0                  0                9               
+# ... with 120 more rows
+-- Attaching packages --------------------------------------- tidyverse 1.3.0 --
+v ggplot2 3.3.3     v purrr   0.3.4
+v tibble  3.1.0     v dplyr   1.0.5
+v tidyr   1.1.3     v stringr 1.4.0
+v readr   1.4.0     v forcats 0.5.1
+-- Conflicts ------------------------------------------ tidyverse_conflicts() --
+x dplyr::filter()         masks stats::filter()
+x readr::guess_encoding() masks rvest::guess_encoding()
+x dplyr::lag()            masks stats::lag()
+# A tibble: 1 x 3
+  Date       `Total Detained` `Total Tested`
+  <chr>                 <dbl>          <dbl>
+1 05/17/2021            20430         166067
+# A tibble: 1 x 4
+  Date      `Total COVID-19 Confirmed in~ `Total Deaths` `Total Cumulative COVI~
+  <chr>                             <dbl>          <dbl>                   <dbl>
+1 05/17/20~                          2077              9                   14821
+# A tibble: 1 x 6
+  Date     `Total Detained` `Total Cumulative COV~ `Total Tested` `Total Deaths`
+  <chr>               <dbl>                  <dbl>          <dbl>          <dbl>
+1 05/17/2~            20430                  14821         166067              9
+# ... with 1 more variable: Total COVID-19 Confirmed in Custody <dbl>
+# A tibble: 131 x 5
+   Date   `Custody/AOR/Fac~ `Confirmed cases ~ `Detainee death~ `Total confirme~
+   <chr>  <chr>             <chr>              <chr>            <chr>           
+ 1 05/17~ Charleston Count~ 0                  0                2               
+ 2 05/17~ Columbia Regiona~ 0                  0                1               
+ 3 05/17~ Folkston Annex (~ 33                 0                33              
+ 4 05/17~ Folkston ICE Pro~ 73                 0                199             
+ 5 05/17~ Irwin County Det~ 6                  0                77              
+ 6 05/17~ Robert A. Deyton~ 0                  0                6               
+ 7 05/17~ Sheriff Al Canno~ 0                  0                1               
+ 8 05/17~ Stewart Detentio~ 27                 4                526             
+ 9 05/17~ Howard County De~ 0                  0                2               
+10 05/17~ Worcester County~ 0                  0                1               
+# ... with 121 more rows
+Error: package or namespace load failed for 'tidyverse' in loadNamespace(j <- i[[1L]], c(lib.loc, .libPaths()), versionCheck = vI[[j]]):
+ namespace 'vctrs' 0.3.6 is already loaded, but >= 0.3.8 is required
+Execution halted
+Error: package or namespace load failed for 'tidyverse' in loadNamespace(j <- i[[1L]], c(lib.loc, .libPaths()), versionCheck = vI[[j]]):
+ namespace 'vctrs' 0.3.6 is already loaded, but >= 0.3.8 is required
+Execution halted
+Error: package or namespace load failed for 'tidyverse' in loadNamespace(j <- i[[1L]], c(lib.loc, .libPaths()), versionCheck = vI[[j]]):
+ namespace 'vctrs' 0.3.6 is already loaded, but >= 0.3.8 is required
+Execution halted
+Error: package or namespace load failed for 'tidyverse' in loadNamespace(j <- i[[1L]], c(lib.loc, .libPaths()), versionCheck = vI[[j]]):
+ namespace 'vctrs' 0.3.6 is already loaded, but >= 0.3.8 is required
+Execution halted
+Error: package or namespace load failed for 'tidyverse' in loadNamespace(j <- i[[1L]], c(lib.loc, .libPaths()), versionCheck = vI[[j]]):
+ namespace 'vctrs' 0.3.6 is already loaded, but >= 0.3.8 is required
+Execution halted
+Error: package or namespace load failed for 'tidyverse' in loadNamespace(j <- i[[1L]], c(lib.loc, .libPaths()), versionCheck = vI[[j]]):
+ namespace 'vctrs' 0.3.6 is already loaded, but >= 0.3.8 is required
+Execution halted

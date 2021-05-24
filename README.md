@@ -1,7 +1,7 @@
 ICE COVID-19 EDA
 ================
 Nathan Craig
-2021-04-23
+2021-04-25
 
 -   [1 Introduction](#introduction)
     -   [1.1 Other Work on ICE COVID-19
@@ -26,14 +26,15 @@ by ICE.
 ## 1.1 Other Work on ICE COVID-19 Data
 
 It is important to note that on November 18, 2020, Smart and Garcia
-(2020) through the Vera Institute of Justice launched an exceptional
-dashboard of ICE data entitled “[Tracking COVID-19 in Immigration
+\[-@smart2020\] through the Vera Institute of Justice launched an
+exceptional dashboard of ICE data entitled “[Tracking COVID-19 in
+Immigration
 Detention](https://www.vera.org/tracking-covid-19-in-immigration-detention).”
 The dashboard includes some plots of summary trends as well as facet
 plots of each facility. The report that goes with the dashboard details
 some of the changes in how ICE has reported the data over time and some
-of the issues with the data ICE supplied. Smart and Garcia’s (2020) work
-also includes a
+of the issues with the data ICE supplied. Smart and Garcia’s
+\[-@smart2020\] work also includes a
 [GitHub](https://github.com/vera-institute/ice-detention-covid)
 repository.
 
@@ -62,8 +63,8 @@ up days that I missed.
 
 In April of 2020, Advocate Visitors with Immigrants in Detention (AVID)
 *in the Chihuahuan Desert* began raising concerns about the spread of
-COVID-19 (Brown Vega and Craig 2020). On April 30, AVID joined other
-immigrant advocacy groups [calling for the
+COVID-19 \[@brownvega2020\]. On April 30, AVID joined other immigrant
+advocacy groups [calling for the
 release](https://avid.chihuahuan.org/2020/04/30/community-groups-call-for-the-release-of-all-people-in-detention/)
 of people from ICE detention due to COVID-19 health risks. On May 14,
 2020 AVID [sent a
@@ -118,15 +119,15 @@ a
 [report](https://deptofgov.nmsu.edu/AVID-NSF-REU-Report-Final-Version-25-November-2020.pdf)
 developed in collaboration with faculty from NMSU that addressed
 concerns raised by migrants detained at the Otero County Processing
-Center during the early part of the COVID-19 pandemic (Brown Vega et al.
-2020). On January 2, 2021 AVID
+Center during the early part of the COVID-19 pandemic
+\[@brownvega2020a\]. On January 2, 2021 AVID
 [released](https://avid.chihuahuan.org/2021/01/02/process-by-torment/)
 an additional
 [report](https://avid.chihuahuan.org/wp-content/uploads/sites/4/2021/01/Process_by_Torment.pdf)
 this time in conjunction with Innovation Law Lab that detailed in part
 concerns expressed by migrants at the Otero County Processing Center
 regarding COVID-19 and specifically the use of prolonged solitary
-confinement for people who tested positive (Craig et al. 2021).
+confinement for people who tested positive \[@craig2021\].
 
 ``` r
 # Load Libraries
@@ -323,44 +324,3 @@ ggplot(df_summary, aes(x=Date, y=`Total Deaths`))+
 ![](README_files/figure-gfm/Total%20Deaths%20in%20ICE%20Custody-1.png)<!-- -->
 
 # 2 References
-
-<div id="refs" class="references csl-bib-body hanging-indent">
-
-<div id="ref-brownvega2020" class="csl-entry">
-
-Brown Vega, Margaret, and Nathan Craig. 2020. “Commentary: Continued ICE
-Detention Risks Spread of COVID-19 in El Paso Region.”
-<https://elpasomatters.org/2020/04/05/commentary-continued-ice-detention-risks-spread-of-covid-19-in-el-paso-region/>.
-
-</div>
-
-<div id="ref-brownvega2020a" class="csl-entry">
-
-Brown Vega, Margaret, Nathan Craig, Emily Durkin, Neil Harvey, Daniela
-Navarro Verdugo, Brennan Ramsey, Fernanda Reyes, and Avigail Turima
-Romo. 2020. “The Pains and Profits of Immigrant Imprisonment: Migrant
-Testimonies from ICE Detention Centers in the El Paso ICE Field Office.”
-Las Cruces, NM.
-<https://deptofgov.nmsu.edu/_assets/documents/AVID-NSF-REU-Report-Final-Version-25-November-2020.pdf>.
-
-</div>
-
-<div id="ref-craig2021" class="csl-entry">
-
-Craig, Nathan, AnaKaren Ortiz Varela, Marissa C Núñez, Margaret Brown
-Vega, Ian Philabaum, and P.J. Podesta. 2021. “Process by Torment:
-Immigration Experiences of Persons Detained at the Otero County
-Processing Center.” El Paso.
-<https://avid.chihuahuan.org/2021/01/02/process-by-torment/>.
-
-</div>
-
-<div id="ref-smart2020" class="csl-entry">
-
-Smart, Noelle, and Adam Garcia. 2020. “Tracking COVID-19 in Immigration
-Detention: A Dashboard of ICE Data.”
-<https://www.vera.org/tracking-covid-19-in-immigration-detention>.
-
-</div>
-
-</div>
