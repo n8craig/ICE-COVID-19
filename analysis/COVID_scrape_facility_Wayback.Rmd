@@ -35,7 +35,7 @@ for (val in urls)
     filter(!grepl("TOTAL", `Custody/AOR/Facility`)) %>% 
     mutate(., Date = date, .before = `Custody/AOR/Facility`) %>% 
     write_csv(.,
-          "./../data/covid_by_facility_tmp.csv",
+          "../data/covid_by_facility_tmp.csv",
           append = TRUE,
           col_names = FALSE)
 }

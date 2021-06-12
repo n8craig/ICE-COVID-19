@@ -1,6 +1,8 @@
 # Load Libraries
 library(rvest)
 library(tidyverse)
+library()
+library(gert)
 
 # Get List of URLs
 url <- "https://www.ice.gov/coronavirus"
@@ -96,3 +98,8 @@ write_csv(confirmed_cases,
           "C:\\Users\\nmc\\Nextcloud\\AVID_Restricted\\ICE_data\\ICE-COVID-19\\data\\covid_by_facility.csv",
           append = TRUE,
           col_names = FALSE)
+
+
+git_add(c("data/covid_summaries.csv", "data/covid_by_facility.csv"))
+git_commit("Today's upate")
+git_push()
