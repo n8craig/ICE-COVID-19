@@ -98,7 +98,7 @@ write_csv(confirmed_cases,
           append = TRUE,
           col_names = FALSE)
 
-
+# Push new data to GitHub
 git_add(c("data/covid_summaries.csv", "data/covid_by_facility.csv"))
 git_commit(paste("Commit on",Sys.time()))
 git_push()
