@@ -1,7 +1,6 @@
 # Load Libraries
 library(rvest)
 library(tidyverse)
-library()
 library(gert)
 
 # Get List of URLs
@@ -101,5 +100,5 @@ write_csv(confirmed_cases,
 
 
 git_add(c("data/covid_summaries.csv", "data/covid_by_facility.csv"))
-git_commit("Today's upate")
+git_commit(paste("Commit on",Sys.time()))
 git_push()
