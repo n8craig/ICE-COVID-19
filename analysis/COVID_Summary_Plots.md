@@ -1,7 +1,7 @@
 ---
 title: "ICE COVID-19 Plots"
 author: "Nathan Craig"
-date: "`r Sys.Date()`"
+date: "2021-06-13"
 output:
   html_document:
     toc: yes
@@ -14,13 +14,10 @@ output:
 
 This document provides plots of data reported on the Immigration and Customs Enforcement [Guidance on COVID-19](https://www.ice.gov/coronavirus) website. On Friday March 13, 2020 ICE suspended family and social visitation. On March 27, 2020 ICE [established](https://web.archive.org/web/20200327175825/https://www.ice.gov/coronavirus) the Guidance on COVID-19 web page and indicated the site would be updated frequently. Shortly afterwards I began logging the data on a daily basis, occasionally relying on the Internet Archive's Wayback Machine's [regular scrapes](https://web.archive.org/web/20200401000000*/https://www.ice.gov/coronavirus) of the page to pick up days that I missed.
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE,
-                      warning = FALSE,
-                      message = FALSE)
-```
 
-```{r Load Libraries}
+
+
+```r
 # Load Libraries
 library(readr)
 library(tidyverse)
@@ -35,10 +32,10 @@ opts_chunk$set(results = 'asis',
                cache = FALSE)
 # Turn off scientific notation
 options(digits=5, scipen=15)
-
 ```
 
-```{r load-dataset}
+
+```r
 # Load Dataset
 df_summary <- read_csv("./../data/covid_summaries.csv", 
     col_types = cols(Date = col_date(format = "%m/%d/%Y"), 
@@ -46,8 +43,8 @@ df_summary <- read_csv("./../data/covid_summaries.csv",
   clean_names()
 ```
 
-```{r ICE-Detention-Population}
 
+```r
 # ICE Detention Population Over Time
 ggplot(df_summary, aes(x=date, y=total_detained))+
   geom_line()+
@@ -60,10 +57,12 @@ ggplot(df_summary, aes(x=date, y=total_detained))+
     x = "Date",
     y = "Total Detained"
   )
-
 ```
 
-```{r}
+![](COVID_Summary_Plots_files/figure-html/ICE-Detention-Population-1.png)<!-- -->
+
+
+```r
 b_inaug <- df_summary %>% 
   filter(date == "2021-01-20") %>% 
   pluck("total_detained")
@@ -79,15 +78,15 @@ yesterday <- df_summary %>%
 detention_change <- yesterday - lowest
 
 percent_change <- round((lowest/yesterday)*100,0)
-
 ```
 
 
-When Biden took office, the detained population was `r b_inaug`. The lowest detention population was `r lowest`reported by ICE between March 9-15, which was 2021 just under three months into the Biden administration. However, by March 16 the detained population began rising again. Today it is `r yesterday` which represents an increase of `r detention_change` individuals from the lowest point and a `r percent_change`% change from that value.
+When Biden took office, the detained population was 14715. The lowest detention population was 13764reported by ICE between March 9-15, which was 2021 just under three months into the Biden administration. However, by March 16 the detained population began rising again. Today it is 24100 which represents an increase of 10336 individuals from the lowest point and a 57% change from that value.
 
 
 
-```{r Total-Confirmed-COVID-19}
+
+```r
 # Total Confirmed COVID-19 Over Time
 ggplot(df_summary, aes(x=date, y=total_covid_19_confirmed_in_custody))+
   geom_line()+
@@ -99,10 +98,12 @@ ggplot(df_summary, aes(x=date, y=total_covid_19_confirmed_in_custody))+
     x = "Date",
     y = "Total COVID-19 Confirmed in Custody"
   )
-
 ```
 
-```{r Ratio-Confirmed-by-Total-Detained}
+![](COVID_Summary_Plots_files/figure-html/Total-Confirmed-COVID-19-1.png)<!-- -->
+
+
+```r
 # Ratio Confirmed by Total Detained
 df_summary %>% 
   mutate(`Confirmed Detained Ratio` = total_covid_19_confirmed_in_custody/total_detained) %>%
@@ -114,10 +115,12 @@ df_summary %>%
     subtitle = "Smoothed trend line added",
     caption = "Data source: https://www.ice.gov/coronavirus"
   )
-
 ```
 
-```{r Cumulative-COVID-19}
+![](COVID_Summary_Plots_files/figure-html/Ratio-Confirmed-by-Total-Detained-1.png)<!-- -->
+
+
+```r
 # Cumulative COVID-19
 ggplot(df_summary, aes(x=date, y=total_cumulative_covid_19))+
   geom_line()+
@@ -129,10 +132,12 @@ ggplot(df_summary, aes(x=date, y=total_cumulative_covid_19))+
     x = "Date",
     y = "Total Cumulative COVID-19"
   )
-
 ```
 
-```{r Total-COVID-19-Tests}
+![](COVID_Summary_Plots_files/figure-html/Cumulative-COVID-19-1.png)<!-- -->
+
+
+```r
 # Total COVID-19 Tests
 ggplot(df_summary, aes(x=date, y=total_tested))+
   geom_line()+
@@ -144,11 +149,13 @@ ggplot(df_summary, aes(x=date, y=total_tested))+
     x = "Date",
     y = "Total Tested"
   )
-
 ```
 
+![](COVID_Summary_Plots_files/figure-html/Total-COVID-19-Tests-1.png)<!-- -->
 
-```{r}
+
+
+```r
 df_summary %>%
   mutate(normalized = total_tested/total_detained) %>% 
   ggplot(aes(x = date, y = `normalized`))+
@@ -161,9 +168,12 @@ df_summary %>%
        y = "Total Tested/Total Detained")
 ```
 
+![](COVID_Summary_Plots_files/figure-html/unnamed-chunk-2-1.png)<!-- -->
 
 
-```{r Total-Deaths-in-ICE-Custody}
+
+
+```r
 # Total Deaths in ICE Custody
 ggplot(df_summary, aes(x=date, y=total_deaths))+
   geom_line()+
@@ -176,3 +186,5 @@ ggplot(df_summary, aes(x=date, y=total_deaths))+
     y = "Total Deaths"
   )
 ```
+
+![](COVID_Summary_Plots_files/figure-html/Total-Deaths-in-ICE-Custody-1.png)<!-- -->
