@@ -59,7 +59,7 @@ ggplot(df_summary, aes(x=date, y=total_detained))+
   )
 ```
 
-![](COVID_Summary_Plots_files/figure-html/ICE-Detention-Population-1.png)<!-- -->
+![plot of chunk ICE-Detention-Population](figure/ICE-Detention-Population-1.png)
 
 
 ```r
@@ -100,7 +100,7 @@ ggplot(df_summary, aes(x=date, y=total_covid_19_confirmed_in_custody))+
   )
 ```
 
-![](COVID_Summary_Plots_files/figure-html/Total-Confirmed-COVID-19-1.png)<!-- -->
+![plot of chunk Total-Confirmed-COVID-19](figure/Total-Confirmed-COVID-19-1.png)
 
 
 ```r
@@ -117,7 +117,7 @@ df_summary %>%
   )
 ```
 
-![](COVID_Summary_Plots_files/figure-html/Ratio-Confirmed-by-Total-Detained-1.png)<!-- -->
+![plot of chunk Ratio-Confirmed-by-Total-Detained](figure/Ratio-Confirmed-by-Total-Detained-1.png)
 
 
 ```r
@@ -134,7 +134,7 @@ ggplot(df_summary, aes(x=date, y=total_cumulative_covid_19))+
   )
 ```
 
-![](COVID_Summary_Plots_files/figure-html/Cumulative-COVID-19-1.png)<!-- -->
+![plot of chunk Cumulative-COVID-19](figure/Cumulative-COVID-19-1.png)
 
 
 ```r
@@ -151,7 +151,7 @@ ggplot(df_summary, aes(x=date, y=total_tested))+
   )
 ```
 
-![](COVID_Summary_Plots_files/figure-html/Total-COVID-19-Tests-1.png)<!-- -->
+![plot of chunk Total-COVID-19-Tests](figure/Total-COVID-19-Tests-1.png)
 
 
 
@@ -168,7 +168,7 @@ df_summary %>%
        y = "Total Tested/Total Detained")
 ```
 
-![](COVID_Summary_Plots_files/figure-html/unnamed-chunk-2-1.png)<!-- -->
+![plot of chunk unnamed-chunk-2](figure/unnamed-chunk-2-1.png)
 
 
 
@@ -187,4 +187,4 @@ ggplot(df_summary, aes(x=date, y=total_deaths))+
   )
 ```
 
-![](COVID_Summary_Plots_files/figure-html/Total-Deaths-in-ICE-Custody-1.png)<!-- -->
+![plot of chunk Total-Deaths-in-ICE-Custody](figure/Total-Deaths-in-ICE-Custody-1.png)
