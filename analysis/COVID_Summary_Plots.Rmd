@@ -83,7 +83,7 @@ percent_change <- round((lowest/yesterday)*100,0)
 ```
 
 
-When Biden took office, the detained population was `r b_inaug`. The lowest detention population was `r lowest`reported by ICE between March 9-15, which was 2021 just under three months into the Biden administration. However, by March 16 the detained population began rising again. Today it is `r yesterday` which represents an increase of `r detention_change` individuals from the lowest point and a `r percent_change`% change from that value.
+When Biden took office, the detained population was `r b_inaug`. The lowest detention population was `r lowest` reported by ICE between March 9-15, which was 2021 just under three months into the Biden administration. However, by March 16 the detained population began rising again. Today it is `r yesterday` which represents an increase of `r detention_change` individuals from the lowest point and a `r percent_change`% change from that value.
 
 
 

@@ -1,7 +1,7 @@
 ---
 title: "ICE COVID-19 Plots"
 author: "Nathan Craig"
-date: "2021-06-14"
+date: "2021-06-15"
 output:
   html_document:
     toc: yes
@@ -59,7 +59,7 @@ ggplot(df_summary, aes(x=date, y=total_detained))+
   )
 ```
 
-![plot of chunk ICE-Detention-Population](figure/ICE-Detention-Population-1.png)
+![](COVID_Summary_Plots_files/figure-html/ICE-Detention-Population-1.png)<!-- -->
 
 
 ```r
@@ -81,7 +81,7 @@ percent_change <- round((lowest/yesterday)*100,0)
 ```
 
 
-When Biden took office, the detained population was 14715. The lowest detention population was 13764reported by ICE between March 9-15, which was 2021 just under three months into the Biden administration. However, by March 16 the detained population began rising again. Today it is 24100 which represents an increase of 10336 individuals from the lowest point and a 57% change from that value.
+When Biden took office, the detained population was 14715. The lowest detention population was 13764 reported by ICE between March 9-15, which was 2021 just under three months into the Biden administration. However, by March 16 the detained population began rising again. Today it is 25238 which represents an increase of 11474 individuals from the lowest point and a 55% change from that value.
 
 
 
@@ -100,7 +100,7 @@ ggplot(df_summary, aes(x=date, y=total_covid_19_confirmed_in_custody))+
   )
 ```
 
-![plot of chunk Total-Confirmed-COVID-19](figure/Total-Confirmed-COVID-19-1.png)
+![](COVID_Summary_Plots_files/figure-html/Total-Confirmed-COVID-19-1.png)<!-- -->
 
 
 ```r
@@ -117,7 +117,7 @@ df_summary %>%
   )
 ```
 
-![plot of chunk Ratio-Confirmed-by-Total-Detained](figure/Ratio-Confirmed-by-Total-Detained-1.png)
+![](COVID_Summary_Plots_files/figure-html/Ratio-Confirmed-by-Total-Detained-1.png)<!-- -->
 
 
 ```r
@@ -134,7 +134,7 @@ ggplot(df_summary, aes(x=date, y=total_cumulative_covid_19))+
   )
 ```
 
-![plot of chunk Cumulative-COVID-19](figure/Cumulative-COVID-19-1.png)
+![](COVID_Summary_Plots_files/figure-html/Cumulative-COVID-19-1.png)<!-- -->
 
 
 ```r
@@ -151,7 +151,7 @@ ggplot(df_summary, aes(x=date, y=total_tested))+
   )
 ```
 
-![plot of chunk Total-COVID-19-Tests](figure/Total-COVID-19-Tests-1.png)
+![](COVID_Summary_Plots_files/figure-html/Total-COVID-19-Tests-1.png)<!-- -->
 
 
 
@@ -168,7 +168,7 @@ df_summary %>%
        y = "Total Tested/Total Detained")
 ```
 
-![plot of chunk unnamed-chunk-2](figure/unnamed-chunk-2-1.png)
+![](COVID_Summary_Plots_files/figure-html/unnamed-chunk-2-1.png)<!-- -->
 
 
 
@@ -187,4 +187,4 @@ ggplot(df_summary, aes(x=date, y=total_deaths))+
   )
 ```
 
-![plot of chunk Total-Deaths-in-ICE-Custody](figure/Total-Deaths-in-ICE-Custody-1.png)
+![](COVID_Summary_Plots_files/figure-html/Total-Deaths-in-ICE-Custody-1.png)<!-- -->
