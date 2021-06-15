@@ -14,6 +14,8 @@ output:
 
 This document provides plots of data reported on the Immigration and Customs Enforcement [Guidance on COVID-19](https://www.ice.gov/coronavirus) website. On Friday March 13, 2020 ICE suspended family and social visitation. On March 27, 2020 ICE [established](https://web.archive.org/web/20200327175825/https://www.ice.gov/coronavirus) the Guidance on COVID-19 web page and indicated the site would be updated frequently. Shortly afterwards I began logging the data on a daily basis, occasionally relying on the Internet Archive's Wayback Machine's [regular scrapes](https://web.archive.org/web/20200401000000*/https://www.ice.gov/coronavirus) of the page to pick up days that I missed.
 
+Results of those scrapes are contained in a [github](https://github.com/n8craig/ICE-COVID-19) repository, and additional details reported on my [website.](https://ncraig.netlify.app/)
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE,
                       warning = FALSE,
@@ -76,9 +78,11 @@ yesterday <- df_summary %>%
   filter(date == Sys.Date()-1) %>% 
   pluck("total_detained")
 
+difference <- yesterday-lowest
+
 detention_change <- yesterday - lowest
 
-percent_change <- round((lowest/yesterday)*100,0)
+percent_change <- round((difference/lowest)*100,0)
 
 ```
 
@@ -86,7 +90,7 @@ percent_change <- round((lowest/yesterday)*100,0)
 When Biden took office, the detained population was `r b_inaug`. The lowest detention population was `r lowest` reported by ICE between March 9-15, which was 2021 just under three months into the Biden administration. However, by March 16 the detained population began rising again. Today it is `r yesterday` which represents an increase of `r detention_change` individuals from the lowest point and a `r percent_change`% change from that value.
 
 
-
+# Active COVID-19 Cases in ICE Detention
 ```{r Total-Confirmed-COVID-19}
 # Total Confirmed COVID-19 Over Time
 ggplot(df_summary, aes(x=date, y=total_covid_19_confirmed_in_custody))+
@@ -117,6 +121,8 @@ df_summary %>%
 
 ```
 
+# Cumulative COVID-19 Cases in ICE Detention
+
 ```{r Cumulative-COVID-19}
 # Cumulative COVID-19
 ggplot(df_summary, aes(x=date, y=total_cumulative_covid_19))+
@@ -131,6 +137,9 @@ ggplot(df_summary, aes(x=date, y=total_cumulative_covid_19))+
   )
 
 ```
+
+# Total Number of COVID-19 tests in ICE detention.
+Note there is no appreciable increase in the rate of tests after January 20, 2021 when biden was inagurated. Based on data reported by ICE, the Biden administration does not appear to have accelerated the rate of COVID-19 testing in ICE detention.
 
 ```{r Total-COVID-19-Tests}
 # Total COVID-19 Tests
@@ -161,7 +170,7 @@ df_summary %>%
        y = "Total Tested/Total Detained")
 ```
 
-
+# Number of Deaths in ICE Detention
 
 ```{r Total-Deaths-in-ICE-Custody}
 # Total Deaths in ICE Custody
