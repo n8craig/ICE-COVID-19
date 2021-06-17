@@ -1,7 +1,7 @@
 ---
 title: "ICE COVID-19 Plots"
 author: "Nathan Craig"
-date: "2021-06-16"
+date: "2021-06-17"
 output:
   html_document:
     toc: yes
