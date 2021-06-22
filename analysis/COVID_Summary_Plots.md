@@ -1,7 +1,7 @@
 ---
 title: "ICE COVID-19 Plots"
 author: "Nathan Craig"
-date: "2021-06-21"
+date: "2021-06-22"
 output:
   html_document:
     toc: yes
@@ -85,7 +85,7 @@ percent_change <- round((difference/lowest)*100,0)
 ```
 
 
-When Biden took office, the detained population was 14715. The lowest detention population was 13764 reported by ICE between March 9-15, which was 2021 just under three months into the Biden administration. However, by March 16 the detained population began rising again. Today it is 25238 which represents an increase of 11474 individuals from the lowest point and a 83% change from that value.
+When Biden took office, the detained population was 14715. The lowest detention population was 13764 reported by ICE between March 9-15, which was 2021 just under three months into the Biden administration. However, by March 16 the detained population began rising again. Today it is 26197 which represents an increase of 12433 individuals from the lowest point and a 90% change from that value.
 
 
 # Active COVID-19 Cases in ICE Detention
