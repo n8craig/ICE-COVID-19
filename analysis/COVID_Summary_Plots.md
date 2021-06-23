@@ -1,13 +1,14 @@
 ---
-title: "ICE COVID-19 Plots"
+title: "ICE Detention Levels and COVID-19 Plots"
 author: "Nathan Craig"
-date: "2021-06-22"
+date: "2021-06-23"
 output:
   html_document:
     toc: yes
     number_sections: true
+    anchor_sections: true
     keep_md: yes
-    code_folding: hide
+    code_download: true
 ---
 
 # Introduction
@@ -19,181 +20,38 @@ Results of those scrapes are contained in a [github](https://github.com/n8craig/
 
 
 
-```r
-# Load Libraries
-library(readr)
-library(tidyverse)
-library(lubridate)
-library(ggplot2)
-library(janitor)
-library(knitr)
-options(digits=3)
-opts_chunk$set(results = 'asis',
-               comment = NA,
-               prompt = FALSE,
-               cache = FALSE)
-# Turn off scientific notation
-options(digits=5, scipen=15)
+
+
+
+
+```
+Error in path.expand(path): invalid 'path' argument
 ```
 
 
-```r
-# Load Dataset
-df_summary <- read_csv("./../data/covid_summaries.csv", 
-    col_types = cols(Date = col_date(format = "%m/%d/%Y"), 
-        `Total Deaths` = col_double(), `Total COVID-19 Confirmed in Custody` = col_double())) %>% 
-  clean_names()
-```
 
 
-```r
-# ICE Detention Population Over Time
-ggplot(df_summary, aes(x=date, y=total_detained))+
-  geom_line()+
-  geom_point()+
-  geom_smooth()+
-  labs(
-    title = "ICE Detention Population Over Time",
-    subtitle = "Smoothed trend line added",
-    caption = "Data source: https://www.ice.gov/coronavirus",
-    x = "Date",
-    y = "Total Detained"
-  )
-```
-
-![plot of chunk ICE-Detention-Population](figure/ICE-Detention-Population-1.png)
-
-
-```r
-b_inaug <- df_summary %>% 
-  filter(date == "2021-01-20") %>% 
-  pluck("total_detained")
-
-lowest <- df_summary %>% 
-  filter(date == "2021-03-09") %>% 
-  pluck("total_detained")
-
-yesterday <- df_summary %>% 
-  filter(date == Sys.Date()-1) %>% 
-  pluck("total_detained")
-
-difference <- yesterday-lowest
-
-detention_change <- yesterday - lowest
-
-percent_change <- round((difference/lowest)*100,0)
-```
-
-
-When Biden took office, the detained population was 14715. The lowest detention population was 13764 reported by ICE between March 9-15, which was 2021 just under three months into the Biden administration. However, by March 16 the detained population began rising again. Today it is 26197 which represents an increase of 12433 individuals from the lowest point and a 90% change from that value.
+When Biden took office, the detained population was 14715. The lowest detention population was 13764 reported by ICE between March 9-15, 2021  which was just under three months into the Biden administration. However, by March 16 the detained population began rising again. As of June 23, 2021, it is 26197 which represents an increase of 12433 individuals from the lowest point and a 90% change from that value.
 
 
 # Active COVID-19 Cases in ICE Detention
 
-```r
-# Total Confirmed COVID-19 Over Time
-ggplot(df_summary, aes(x=date, y=total_covid_19_confirmed_in_custody))+
-  geom_line()+
-  geom_smooth()+
-   labs(
-    title = "Total Number of Confirmed COVID-19 Cases in ICE Detention",
-    subtitle = "Smoothed trend line added",
-    caption = "Data source: https://www.ice.gov/coronavirus",
-    x = "Date",
-    y = "Total COVID-19 Confirmed in Custody"
-  )
 ```
-
-![plot of chunk Total-Confirmed-COVID-19](figure/Total-Confirmed-COVID-19-1.png)
-
-
-```r
-# Ratio Confirmed by Total Detained
-df_summary %>% 
-  mutate(`Confirmed Detained Ratio` = total_covid_19_confirmed_in_custody/total_detained) %>%
-  ggplot(aes(x=date, y=`Confirmed Detained Ratio`))+
-  geom_line()+
-  geom_smooth()+
-   labs(
-    title = "Ratio of Confirmed COVID-19 Cases in ICE Detention by \nTotal ICE Detention Population",
-    subtitle = "Smoothed trend line added",
-    caption = "Data source: https://www.ice.gov/coronavirus"
-  )
+Error in path.expand(path): invalid 'path' argument
 ```
-
-![plot of chunk Ratio-Confirmed-by-Total-Detained](figure/Ratio-Confirmed-by-Total-Detained-1.png)
 
 # Cumulative COVID-19 Cases in ICE Detention
 
-
-```r
-# Cumulative COVID-19
-ggplot(df_summary, aes(x=date, y=total_cumulative_covid_19))+
-  geom_line()+
-  geom_smooth()+
-   labs(
-    title = "Cumulative COVID-19 Cases in ICE Detention",
-    subtitle = "Smoothed trend line added",
-    caption = "Data source: https://www.ice.gov/coronavirus",
-    x = "Date",
-    y = "Total Cumulative COVID-19"
-  )
-```
-
 ![plot of chunk Cumulative-COVID-19](figure/Cumulative-COVID-19-1.png)
 
-# Total Number of COVID-19 tests in ICE detention.
-Note there is no appreciable increase in the rate of tests after January 20, 2021 when biden was inagurated. Based on data reported by ICE, the Biden administration does not appear to have accelerated the rate of COVID-19 testing in ICE detention.
-
-
-```r
-# Total COVID-19 Tests
-ggplot(df_summary, aes(x=date, y=total_tested))+
-  geom_line()+
-  geom_smooth()+
-   labs(
-    title = "Total Number of COVID-19 Tests in ICE Detention Population \nOver Time",
-    subtitle = "Smoothed trend line added",
-    caption = "Data source: https://www.ice.gov/coronavirus",
-    x = "Date",
-    y = "Total Tested"
-  )
-```
+# Total Number of COVID-19 tests in ICE detention
+Note there is no appreciable increase in the rate of tests after January 20, 2021 when Biden was inaugurated. Based on data reported by ICE, the Biden administration does not appear to have accelerated the rate of COVID-19 testing in ICE detention.
 
 ![plot of chunk Total-COVID-19-Tests](figure/Total-COVID-19-Tests-1.png)
 
 
-
-```r
-df_summary %>%
-  mutate(normalized = total_tested/total_detained) %>% 
-  ggplot(aes(x = date, y = `normalized`))+
-  geom_line()+
-  geom_smooth()+
-  labs(title = "Ratio Total Tested/Total Detained",
-       subtitle = "Smoothed trend line added",
-       caption = "Data source: https://www.ice.gov/coronavirus",
-       x = "Date",
-       y = "Total Tested/Total Detained")
-```
-
 ![plot of chunk unnamed-chunk-2](figure/unnamed-chunk-2-1.png)
 
 # Number of Deaths in ICE Detention
-
-
-```r
-# Total Deaths in ICE Custody
-ggplot(df_summary, aes(x=date, y=total_deaths))+
-  geom_line()+
-  geom_smooth()+
-   labs(
-    title = "Total Number of Deaths in ICE Detention Over Time",
-    subtitle = "Smoothed trend line added",
-    caption = "Data source: https://www.ice.gov/coronavirus",
-    x= "Date",
-    y = "Total Deaths"
-  )
-```
 
 ![plot of chunk Total-Deaths-in-ICE-Custody](figure/Total-Deaths-in-ICE-Custody-1.png)

@@ -1,7 +1,7 @@
 ICE COVID-19 EDA
 ================
 Nathan Craig
-2021-04-25
+2021-06-22
 
 -   [1 Introduction](#introduction)
     -   [1.1 Other Work on ICE COVID-19
@@ -139,6 +139,8 @@ library(summarytools)
     ##   method      from
     ##   print.bytes Rcpp
 
+    ## For best results, restart R session and update pander using devtools:: or remotes::install_github('rapporter/pander')
+
 ``` r
 st_options(plain.ascii = FALSE,
            footnote = NA,
@@ -147,10 +149,10 @@ st_options(plain.ascii = FALSE,
 library(tidyverse)
 ```
 
-    ## -- Attaching packages --------------------------------------- tidyverse 1.3.0 --
+    ## -- Attaching packages --------------------------------------- tidyverse 1.3.1 --
 
-    ## v ggplot2 3.3.3     v dplyr   1.0.5
-    ## v tibble  3.1.0     v stringr 1.4.0
+    ## v ggplot2 3.3.3     v dplyr   1.0.6
+    ## v tibble  3.1.1     v stringr 1.4.0
     ## v tidyr   1.1.3     v forcats 0.5.1
     ## v purrr   0.3.4
 
@@ -175,13 +177,9 @@ library(ggplot2)
 library(ggstatsplot)
 ```
 
-    ## Registered S3 method overwritten by 'parameters':
-    ##   method     from      
-    ##   ci.blavaan bayestestR
-
-    ## In case you would like cite this package, cite it as:
-    ##      Patil, I. (2018). ggstatsplot: "ggplot2" Based Plots with Statistical Details. CRAN.
-    ##      Retrieved from https://cran.r-project.org/web/packages/ggstatsplot/index.html
+    ## You can cite this package as:
+    ##      Patil, I. (2021). Visualizations with statistical details: The 'ggstatsplot' approach.
+    ##      PsyArxiv. doi:10.31234/osf.io/p7mku
 
 ``` r
 library(knitr)
