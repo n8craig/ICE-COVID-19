@@ -5,15 +5,19 @@ date: "`r Sys.Date()`"
 output:
   html_document:
     toc: yes
-    number_sections: true
+    number_sections: false
     anchor_sections: true
     keep_md: yes
     code_download: true
 ---
 
+## Notice: This page is no longer regularly updated; daily updated graphs are now [located here](https://ncraig.netlify.app/posts/2021-06-30-current-ice-detention-population/).
+
+****
+
 # Introduction
 
-This document provides plots of data reported on the Immigration and Customs Enforcement [Guidance on COVID-19](https://www.ice.gov/coronavirus) website. On Friday March 13, 2020 ICE suspended family and social visitation. On March 27, 2020 ICE [established](https://web.archive.org/web/20200327175825/https://www.ice.gov/coronavirus) the Guidance on COVID-19 web page and indicated the site would be updated frequently. Shortly afterwards I began logging the data on a daily basis, occasionally relying on the Internet Archive's Wayback Machine's [regular scrapes](https://web.archive.org/web/20200401000000*/https://www.ice.gov/coronavirus) of the page to pick up days that I missed.
+The following document provides plots of data reported on the Immigration and Customs Enforcement [Guidance on COVID-19](https://www.ice.gov/coronavirus) website. On Friday March 13, 2020 ICE suspended family and social visitation. On March 27, 2020 ICE [established](https://web.archive.org/web/20200327175825/https://www.ice.gov/coronavirus) the Guidance on COVID-19 web page and indicated the site would be updated frequently. Shortly afterwards I began logging the data on a daily basis, occasionally relying on the Internet Archive's Wayback Machine's [regular scrapes](https://web.archive.org/web/20200401000000*/https://www.ice.gov/coronavirus) of the page to pick up days that I missed.
 
 Results of those scrapes are contained in a [github](https://github.com/n8craig/ICE-COVID-19) repository, and additional details reported on my [website.](https://ncraig.netlify.app/)
 
