@@ -118,7 +118,7 @@ covid_summary_totals
 
 ```{r}
 write_csv(covid_summary_totals,
-          "./../data/covid_summaries.csv",
+          "./../data/covid_summaries_tmp.csv",
           append = TRUE,
           col_names = FALSE)
 ```
