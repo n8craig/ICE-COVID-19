@@ -9,6 +9,8 @@ output:
 ```{r}
 library(rvest)
 library(tidyverse)
+
+library(lubridate)
 ```
 
 ```{r}
@@ -37,6 +39,7 @@ urls %>%
   str_sub(.,start = 1, end = 8)
 ```
 
+
 ```{r}
 # Get the total detained population as a string
 total_detained <- 
@@ -50,8 +53,6 @@ page %>%
   str_split(., "\n") %>% 
   map(.,2) %>% 
   str_c()
-
-
 
 # Total tested
 total_tested <-

@@ -1,0 +1,30 @@
+Earlier versions of this project used date in the format of Month, Day, Year. This came from when I was manually copying the files and putting them into Excel. So that new data would fit with old data, I maintained that date format.
+
+On 2-25-2022, the scraper broke. As I was digging into the files, I am seeing that date is recorded in a non-conventional way. I am going to change the way date is reported so that it is more standard.
+
+This file contains code that could be used to take the existing `covid_summaries.csv` file, convert the date, and save it again in the new format.
+
+The plan is to change over all of the date scraping to record date in the standard format for R.
+
+
+```{r}
+library(lubridate)
+```
+
+```{r}
+# Read existing CSV file
+# This should be a copy with dates formatted wrong.
+df <- read.csv(here::here("data/covid_summaries_testing.csv"))
+```
+
+```{r}
+# Convert date into conventional format
+df <- df %>% 
+  mutate(Date = mdy(Date))
+```
+
+```{r}
+# Write out file
+write.csv(df, here::here("data/covid_summaries_testing.csv"))
+```
+
