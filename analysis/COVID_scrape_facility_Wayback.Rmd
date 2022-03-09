@@ -9,6 +9,7 @@ output:
 ```{r}
 library(rvest)
 library(tidyverse)
+library(lubridate)
 ```
 
 ```{r}
@@ -33,13 +34,16 @@ for (val in urls)
     filter(!grepl("Field Office", `Confirmed cases currently under isolation or monitoring`)) %>%
     filter(!grepl("Endeavors", `Confirmed cases currently under isolation or monitoring`)) %>% 
     filter(!grepl("TOTAL", `Custody/AOR/Facility`)) %>% 
-    mutate(., Date = date, .before = `Custody/AOR/Facility`) %>% 
+    mutate(., Date = ymd(date), .before = `Custody/AOR/Facility`) %>% 
     write_csv(.,
           "../data/covid_by_facility_tmp.csv",
           append = TRUE,
           col_names = FALSE)
 }
 ```
+
+
+
 
 # Working out some new things for records that are between 2020-11-22 and 2021-01-12
 ```{r}

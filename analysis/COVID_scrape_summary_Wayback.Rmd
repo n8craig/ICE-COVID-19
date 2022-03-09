@@ -9,7 +9,6 @@ output:
 ```{r}
 library(rvest)
 library(tidyverse)
-
 library(lubridate)
 ```
 
@@ -74,7 +73,8 @@ out_table1 <-
   `Total Detained` = total_detained,
   `Total Tested` = total_tested
   ) %>% 
-  mutate(ID = row_number())
+  mutate(ID = row_number(),
+         Date = ymd(Date))
 out_table1
 ```
 
