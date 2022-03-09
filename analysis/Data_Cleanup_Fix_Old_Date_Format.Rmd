@@ -14,7 +14,7 @@ library(lubridate)
 ```{r}
 # Read existing CSV file
 # This should be a copy with dates formatted wrong.
-df <- read.csv(here::here("data/covid_summaries_testing.csv"))
+df <- read.csv(here::here("data/covid_summaries.csv"))
 ```
 
 ```{r}
@@ -25,6 +25,6 @@ df <- df %>%
 
 ```{r}
 # Write out file
-write.csv(df, here::here("data/covid_summaries_testing.csv"))
+write.csv(df, here::here("data/covid_summaries.csv"))
 ```
 
