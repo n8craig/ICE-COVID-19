@@ -9,13 +9,26 @@ The plan is to change over all of the date scraping to record date in the standa
 
 ```{r}
 library(lubridate)
+library(dplyr)
+library(magrittr)
+library(stringr)
 ```
 
 ```{r}
 # Read existing CSV file
 # This should be a copy with dates formatted wrong.
-df <- read.csv(here::here("data/covid_summaries_testing.csv"))
+df <- read.csv(here::here("data/covid_by_facility.csv"))
 ```
+
+```{r}
+# This was to fix an error in the date that got introduced via Wayback Scrapes.
+# df <- df %>% 
+#   mutate(Date = str_replace_all(Date,
+#                                 pattern = "20222",
+#                                 replacement = "2022"))
+```
+
+
 
 ```{r}
 # Convert date into conventional format
@@ -24,7 +37,14 @@ df <- df %>%
 ```
 
 ```{r}
+df <- df %>% select(-X)
+```
+
+
+```{r}
 # Write out file
-write.csv(df, here::here("data/covid_summaries_testing.csv"))
+# Note that write.csv adds an index col
+# Cleaner to use write_csv
+write_csv(df, here::here("data/covid_by_facility.csv"))
 ```
 

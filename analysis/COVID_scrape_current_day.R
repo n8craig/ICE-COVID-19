@@ -33,7 +33,7 @@ total_tested <-
 
 # Add date to summary values
 covid_summary_totals <- 
-  tibble(Date = format(Sys.time(), "%m/%d/%Y"), # CHANGE DATE HERE
+  tibble(Date = format(Sys.time(), "%Y-%m-%d"), # CHANGE DATE HERE
          `Total Detained` = total_detained,
          `Total Tested` = total_tested)
 covid_summary_totals$`Total Detained` <- as.numeric(gsub(",", "", covid_summary_totals$`Total Detained`))
@@ -61,7 +61,7 @@ covid_summary_totals2 <-
     map(tibble_list,
         ~pluck(.x)
     )) %>% 
-  mutate(Date = format(Sys.time(), "%m/%d/%Y"), .before = `Total COVID-19 Confirmed in Custody`) #CHANGE DATE HERE
+  mutate(Date = format(Sys.time(), "%Y-%m-%d"), .before = `Total COVID-19 Confirmed in Custody`) #CHANGE DATE HERE
 covid_summary_totals2$`Total COVID-19 Confirmed in Custody` <- as.numeric(gsub(",", "", covid_summary_totals2$`Total COVID-19 Confirmed in Custody`))
 covid_summary_totals2$`Total Deaths` <- as.numeric(gsub(",", "", covid_summary_totals2$`Total Deaths`))
 covid_summary_totals2$`Total Cumulative COVID-19` <- as.numeric(gsub(",", "", covid_summary_totals2$`Total Cumulative COVID-19`))
@@ -91,7 +91,7 @@ confirmed_cases <- html_nodes(page, "table") %>%
 
 # Add date to cases by facility
 confirmed_cases <- 
-  mutate(confirmed_cases, Date = format(Sys.time(), "%m/%d/%Y"), .before = `Custody/AOR/Facility`)
+  mutate(confirmed_cases, Date = format(Sys.time(), "%Y-%m-%d"), .before = `Custody/AOR/Facility`)
 confirmed_cases
 
 # Write out data by facility
@@ -101,6 +101,6 @@ write_csv(confirmed_cases,
           col_names = FALSE)
 
 # Push new data to GitHub
-credentials::set_github_pat()
-git_commit_all(message = paste("Commit on",Sys.time()))
-git_push()
+# credentials::set_github_pat()
+# git_commit_all(message = paste("Commit on",Sys.time()))
+# git_push()
